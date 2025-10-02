@@ -10,17 +10,3 @@ copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher
 
 
 
-################################### French language #####################################
-[fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-[fr.params]
-home = "Accueil"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
-
-
-
-
-
