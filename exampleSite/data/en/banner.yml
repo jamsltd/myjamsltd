@@ -4,8 +4,8 @@ banner:
   bg_image_webp : "images/backgrounds/hero-area.webp"
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "Experience the new reality"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, excepturi. At recusandae sit perferendis autem,iste tempora nostrum numquam sapiente!"
+  title : "Rehearsal Reimagined"
+  content : "We bring cutting-edge research in immersive technologies to musicians, educators, and creators. Our tools enable musicians to rehearse and perform together — anytime, anywhere — using responsive virtual bandmates and augmented reality."
   button:
     enable : true
     label : "Explore Us"
