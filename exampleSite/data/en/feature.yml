@@ -4,7 +4,7 @@ feature:
   image : images/about/about-business-man.jpg
   image_webp : images/about/about-business-man.webp
   title : Use Cases
-  content : "The ARME platform allows users to rehearse with virtual avatars of musicians that adapt in real-time to the player’s timing and interpretation. Whether you’re a soloist preparing for a quartet, a music teacher looking to enrich practice, or an institution offering immersive learning, ARME scales with your needs."
+  content : "Our platform allows users to rehearse with virtual avatars of musicians that adapt in real-time to the player’s timing and interpretation. Whether you’re a soloist preparing for a quartet, a music teacher looking to enrich practice, or an institution offering immersive learning, ARME scales with your needs."
   feature_item : 
       # feature item loop
     - title : Music Education
