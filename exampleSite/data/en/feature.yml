@@ -17,6 +17,6 @@ feature:
       content : Flexibility when in-person rehearsals aren’t possible.  
       
       # feature item loop
-    - title :Public Engagement
+    - title : Public Engagement
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
       content : Interactive installations and experiences for festivals, museums, and schools.
