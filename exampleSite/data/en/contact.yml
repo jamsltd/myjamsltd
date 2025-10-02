@@ -24,7 +24,6 @@ contact:
   contact_form:
     enable : true
     provider: netlify
-    form_action : "#" #contact form works with https://formspree.io
     name : "Your Name"
     email : "Your Email"
     subject : "Subject"
