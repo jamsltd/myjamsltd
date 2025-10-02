@@ -8,7 +8,7 @@ contact:
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Khaja Road, Bayzid, Chittagong, Bangladesh"
+      info : "Birmingham, UK"
       
     - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
       info : "Phone: +880-31-000-000"
@@ -23,9 +23,11 @@ contact:
   # Contact form
   contact_form:
     enable : true
+    provider: netlify
     form_action : "#" #contact form works with https://formspree.io
     name : "Your Name"
     email : "Your Email"
     subject : "Subject"
     message : "Message"
-    submit : "Submit"
+    submit : "Submit"   
+
