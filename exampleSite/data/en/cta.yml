@@ -3,8 +3,8 @@ cta:
   enable : true
   bg_image : "images/backgrounds/bg-white-wall.jpg"
   bg_image_webp : "images/backgrounds/bg-white-wall.webp"
-  title : "Great Design & Incredible Features"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+  title : "Transforming Rehearsal with Virtual Musicians"
+  content : "JAMS LTD develops immersive music technologies that let musicians rehearse and perform with intelligent, interactive virtual players. Our core innovation stems from the ARME (Augmented Reality Music Ensemble) research programme, combining cutting-edge AI, motion capture, audio processing, and augmented reality to create flexible rehearsal tools for individuals, educators, and institutions."
   button:
     enable : true
     label : "Start a project with us"

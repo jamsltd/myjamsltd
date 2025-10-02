@@ -4,13 +4,13 @@ about:
   title : About Us
   about_item :
   - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
+    title : ARME
+    content : JAMS LTD was founded to commercialise the award-winning research project Augmented Reality Music Ensemble, developed at the University of Birmingham with support from EPSRC, BBSRC, and industry partners.
+    
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Practice music togheter
+    content : Our mission is to transform music rehearsal, education, and performance through immersive technologies. Whether you’re a solo artist, a music teacher, or a technology innovator, we provide a platform to rehearse, collaborate, and explore music in new dimensions.
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Our vision
+    content : To make ensemble music rehearsal accessible, adaptive, and inspiring through immersive technology.

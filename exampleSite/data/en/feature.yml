@@ -3,25 +3,20 @@ feature:
   enable : true
   image : images/about/about-business-man.jpg
   image_webp : images/about/about-business-man.webp
-  title : We’re A Digital Design Agency.
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi."
+  title : Use Cases
+  content : "The ARME platform allows users to rehearse with virtual avatars of musicians that adapt in real-time to the player’s timing and interpretation. Whether you’re a soloist preparing for a quartet, a music teacher looking to enrich practice, or an institution offering immersive learning, ARME scales with your needs."
   feature_item : 
       # feature item loop
-    - title : SEO Optimized
-      icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
-      
-      # feature item loop
-    - title : Easy Customization
+    - title : Music Education
       icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
-
-      # feature item loop
-    - title : SEO Optimized
-      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Individual and group practice with adjustable difficulty and feedback.
       
       # feature item loop
-    - title : Easy Customization
+    - title : Professional Rehearsal
+      icon : ti-world # themify icon pack : https://themify.me/themify-icons
+      content : Flexibility when in-person rehearsals aren’t possible.  
+      
+      # feature item loop
+    - title :Public Engagement
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+      content : Interactive installations and experiences for festivals, museums, and schools.
