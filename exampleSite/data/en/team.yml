@@ -9,15 +9,7 @@ team:
       image : images/team/massimiliano-di-luca.jpg
       designation : Scientific Lead / Co-Founder
       content : >
-        Massimiliano (Max) Di Luca is the Scientific Lead of MyJAMS Ltd.  
-        He is an Associate Professor in the School of Psychology and the School of Computer Science
-        at the University of Birmingham, where he leads the Virtual Reality Lab.  
-        Max’s research explores multisensory perception, haptics, and immersive technologies, often in collaboration
-        with leading technology companies such as Facebook Reality Labs, Google, and Procter & Gamble.  
-        He has published extensively in top international journals and conferences, advancing both theoretical
-        understanding and real-world applications of XR technologies.  
-        He is also the PI of the ARME Project (https://arme-project.co.uk) and the JAMS Project,
-        supported by EPSRC, BBSRC, and industry partners. At MyJAMS Ltd, Max ensures the scientific rigour and innovation
+        Massimiliano (Max) Di Luca is Associate Professor at the University of Birmingham, where he leads the Virtual Reality Lab (https://virtualrealitylab.netlify.app) and is the PI of the ARME Project (https://arme-project.co.uk). At MyJAMS Ltd, Max ensures the scientific rigour and innovation
         of the technology, guiding its development from experimental prototypes to impactful products.
       social :
         - icon : ti-linkedin
@@ -33,13 +25,8 @@ team:
       image : images/team/diar-abdlkarim.jpg
       designation : Entrepreneurial Lead / Co-Founder
       content : >
-        Diar Abdlkarim is the Entrepreneurial Lead of MyJAMS Ltd.  
-        He is a research scientist and prototyping expert with a background in neuroscience and virtual reality,
-        and co-founder of Obi Robotics, a company specialising in hand and body tracking devices for robotics and AR/VR.  
-        Diar’s expertise spans computer vision for 3D tracking, physics simulations for object grasping and haptics,
-        as well as coding, psychophysics, and game engine development.  
-        He has published research on VR tracking performance and has extensive experience in taking research concepts
-        from lab to prototype. At MyJAMS Ltd, Diar drives innovation and translation of cutting-edge research into products,
+        Diar is a research scientist and prototyping expert with a background in neuroscience and virtual reality,
+        and co-founder of Obi Robotics (https://www.obirobotics.com), and Motiondynamics (https://motiondynamics.ai). At MyJAMS Ltd, Diar drives innovation and translation of cutting-edge research into products,
         working closely with musicians, technologists, and partners to deliver novel rehearsal and performance platforms.
       social :
         - icon : ti-linkedin
