@@ -8,7 +8,7 @@ feature:
   feature_item : 
       # feature item loop
     - title : Music Education
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
+      icon : ti-book  # themify icon pack : https://themify.me/themify-icons
       content : Individual and group practice with adjustable difficulty and feedback.
       
       # feature item loop
@@ -20,3 +20,10 @@ feature:
     - title : Public Engagement
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
       content : Interactive installations and experiences for festivals, museums, and schools.
+      
+      #ti-music-alt
+      #ti-panel
+      #ti-location-pin
+      #ti-light-bulb
+      #ti-microphone
+      #ti-dashboard
