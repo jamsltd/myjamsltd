@@ -21,24 +21,21 @@ contact:
 
 
   # Contact form
-  contact_form:
+    autolink: true
+    contact_form:
     enable : true
     provider: netlify
     name : "Your Name"
     email : "Your Email"
-    subject : "Subject"
     message : "Message"
-    submit : "Submit"   
----
+    submit : "Submit"
+    formspree:
+    id:
+    netlify:
+    # Enable CAPTCHA challenge to reduce spam?
+    captcha: true   
 
-<form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+
+
+
+   
