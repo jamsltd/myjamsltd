@@ -24,7 +24,6 @@
         <h3>{{ .subtitle | markdownify }}</h3>
         <p>{{ .content | markdownify }}</p>
 
-        {{ if .contact_form.enable }}
         <div class="contact-details">
           {{ range .contact_list }}
           <div class="con-info clearfix">
@@ -33,23 +32,16 @@
           </div>
           {{ end }}
         </div>
-        {{ end }}
       </div>
 
       <!-- Contact Form -->
       {{ if .contact_form.enable }}
       {{ with .contact_form }}
       <div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-        
-        {{ if eq .provider "netlify" }}
-        <!-- Netlify form -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form-meghna">
+
+        <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="form-meghna">
           <input type="hidden" name="form-name" value="contact">
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-        {{ else }}
-        <!-- External provider (e.g., Formspree) -->
-        <form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}" role="form">
-        {{ end }}
 
           <div class="form-group">
             <input type="text" placeholder="{{ .name }}" class="form-control" name="name" id="name" required>
@@ -68,18 +60,11 @@
               value="{{ .submit }}">{{ .submit }}</button>
           </div>
         </form>
+
       </div>
       {{ end }}
-      {{ else }}
-      <div class="contact-details">
-        {{ range .contact_list }}
-        <div class="con-info clearfix">
-          <i class="{{ .icon }}"></i>
-          <span>{{ .info }}</span>
-        </div>
-        {{ end }}
-      </div>
       {{ end }}
+
     </div>
   </div>
 </section>
