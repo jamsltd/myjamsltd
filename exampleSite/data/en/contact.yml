@@ -21,10 +21,10 @@ contact:
 
 
   # Contact form
-    autolink: true
-    contact_form:
+  contact_form:
     enable : true
     provider: netlify
+    autolink: true
     name : "Your Name"
     email : "Your Email"
     message : "Message"
@@ -34,8 +34,3 @@ contact:
     netlify:
     # Enable CAPTCHA challenge to reduce spam?
     captcha: true   
-
-
-
-
-   
