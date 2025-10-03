@@ -1,15 +1,15 @@
 ---
 title: "Diar Abdlkarim"
-image: ""
-email: "email2@example.org"
+image: "images/team/diar-abdlkarim.jpg"
 social:
-  - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-github" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
+  - icon : "ti-linkedin"
+    link : "https://www.linkedin.com/in/diar-karim"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.
-Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper.
+Diar Abdlkarim is the **Entrepreneurial Lead of MyJAMS Ltd**.  
+
+He is a research scientist and prototyping expert with a background in neuroscience and virtual reality, and co-founder of **Obi Robotics**, a company specialising in hand and body tracking devices for robotics and AR/VR.  
+
+Diar’s expertise spans computer vision for 3D tracking, physics simulations for object grasping and haptics, as well as coding, psychophysics, and game engine development. He has published research on VR tracking performance and has extensive experience in taking research concepts from lab to prototype.  
+
+At MyJAMS Ltd, Diar drives innovation and translation of cutting-edge research into products, working closely with musicians, technologists, and partners to deliver novel rehearsal and performance platforms.
