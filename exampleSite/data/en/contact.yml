@@ -10,14 +10,14 @@ contact:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
       info : "Birmingham, UK"
       
-    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
-      info : "Phone: +880-31-000-000"
+  #  - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
+  #    info : "Phone: +880-31-000-000"
       
-    - icon : ti-printer # themify icon pack : https://themify.me/themify-icons
-      info : "Fax: +880-31-000-000"
+  #  - icon : ti-printer # themify icon pack : https://themify.me/themify-icons
+  #    info : "Fax: +880-31-000-000"
       
-    - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      info : "Email: hello@meghna.com"
+   # - icon : ti-email # themify icon pack : https://themify.me/themify-icons
+   #   info : "Email: hello@meghna.com"
 
 
   # Contact form
@@ -29,4 +29,16 @@ contact:
     subject : "Subject"
     message : "Message"
     submit : "Submit"   
+---
 
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
