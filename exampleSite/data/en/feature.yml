@@ -2,6 +2,7 @@
 feature:
   enable : true
   image : images/about/uob-tier-one-photography-091123-139.jpg
+  image_webp : images/about/uob-tier-one-photography-091123-139.webp
   title : Use Cases
   content : "Our platform allows users to rehearse with virtual avatars of musicians that adapt in real-time to the player’s timing and interpretation. Whether you’re a soloist preparing for a quartet, a music teacher looking to enrich practice, or an institution offering immersive learning, ARME scales with your needs."
   feature_item : 
