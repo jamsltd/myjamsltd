@@ -24,13 +24,8 @@ contact:
   contact_form:
     enable : true
     provider: netlify
-    autolink: true
     name : "Your Name"
     email : "Your Email"
+    subject : "Subject"
     message : "Message"
-    submit : "Submit"
-    formspree:
-    id:
-    netlify:
-    # Enable CAPTCHA challenge to reduce spam?
-    captcha: true   
+    submit : "Submit"   

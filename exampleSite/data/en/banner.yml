@@ -8,5 +8,5 @@ banner:
   content : "We bring cutting-edge research in immersive technologies to musicians, educators, and creators. Our tools enable musicians to rehearse and perform together — anytime, anywhere — using responsive virtual bandmates and augmented reality."
   button:
     enable : true
-    label : "Explore Us"
-    link : "#services"
+    label : "Contact Us"
+    link : "#contact"
