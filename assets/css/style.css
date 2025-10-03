@@ -2339,6 +2339,6 @@ figcaption {
 
 /* === NEW FONT SIZE OVERRIDE FOR MENU === */
 .navbar-dark .navbar-nav .nav-link {
-  font-size: 18px;   /* change this value as you like */
+  font-size: 32px;   /* change this value as you like */
   font-weight: 500;  /* optional: makes it slightly bolder */
 }
