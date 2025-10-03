@@ -2297,3 +2297,48 @@ figcaption {
 .cookie-box-hide {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================
+  Navigation
+==================================================================*/
+.navigation {
+  background-color: #1d2024;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+  color: #57cbcc;
+}
+
+.navbar-toggler:focus {
+  outline: 0;
+}
+
+/* === NEW FONT SIZE OVERRIDE FOR MENU === */
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 18px;   /* change this value as you like */
+  font-weight: 500;  /* optional: makes it slightly bolder */
+}
