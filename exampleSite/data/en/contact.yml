@@ -3,7 +3,7 @@ contact:
   enable : true
   title : Contact Us
   subtitle : Contact Details
-  content :      To get in touch, please fill in the form below.
+  content :      To get in touch, please fill in the form on the right.
 
   # Contact details
   contact_list:
