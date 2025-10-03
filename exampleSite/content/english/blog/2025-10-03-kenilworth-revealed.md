@@ -7,10 +7,10 @@ author: MyJAMS Team
 description : "An AR experience bringing Kenilworth’s history to life."
 ---
 
-We launched Kenilworth Revealed, an augmented reality project that uncovers the hidden stories of the town. Through interactive technology, visitors can explore history in a new and engaging way.
+MyJams contributed to Kenilworth Revealed, an augmented reality project that uncovers the hidden stories of the town. Through interactive technology, visitors can explore history in a new and engaging way.
 
 
-Find out more about [Kenilworth Revealed](https://www.kenilworthweb.co.uk/).
+Find out more about [Kenilworth Revealed](https://kenilworth-tc.gov.uk/kenilworth-revealed-augmented-reality-to-bring-st-marys-abbey-to-life/).
 ---
 
 *Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
