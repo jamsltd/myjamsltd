@@ -5,6 +5,7 @@ image_webp: images/blog/kenilworth-revealed-ar.png
 image: images/blog/kenilworth-revealed-ar.png
 author: MyJAMS Team
 description : "An AR experience bringing Kenilworth’s history to life."
+hide_page_image: true
 ---
 
 MyJams contributed to Kenilworth Revealed, an augmented reality project that uncovers the hidden stories of the town. Through interactive technology, visitors can explore history in a new and engaging way.

@@ -11,9 +11,11 @@
           <li class="list-inline-item"><a href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}/">{{ .Params.Author }}</a></li>
           <li class="list-inline-item">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
         </ul>
-        <div class="single-blog-image{{ if .Params.logo_image }} logo-image{{ end }}">
-          {{ partial "image.html" (dict "Src" .Params.Image "Alt" "Blog Image" "Class" "img-fluid mb-50 lozad") }}
-        </div>
+        {{ if not .Params.hide_page_image }}
+          <div class="single-blog-image{{ if .Params.logo_image }} logo-image{{ end }}">
+            {{ partial "image.html" (dict "Src" .Params.Image "Alt" "Blog Image" "Class" "img-fluid mb-50 lozad") }}
+          </div>
+        {{ end }}
       </div>
       <div class="col-lg-8 offset-lg-2">
         <div class="post-single-content">
