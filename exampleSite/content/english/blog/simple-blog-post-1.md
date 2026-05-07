@@ -1,18 +1,17 @@
 ---
-title: "Simple Blog Post"
-date: 2018-09-12T12:52:36+06:00
-image_webp: images/blog/blog-post-3.webp
-image: images/blog/blog-post-3.jpg
-author: John Doe
-description : "This is meta description"
+title: "Prototype Showcase: Adaptive Rehearsal Tools"
+date: 2024-10-08T10:00:00+01:00
+image_webp: images/blog/prototype-showcase.jpg
+image: images/blog/prototype-showcase.jpg
+author: MyJAMS Team
+description : "A snapshot of MyJAMS rehearsal, XR, and creative tool prototypes."
+hidden: true
 ---
 
-Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+Our prototype ecosystem spans rehearsal, XR, creative production, and public engagement. The common thread is adaptive interaction: virtual musicians should respond to the performer, not simply play back a fixed recording.
 
-Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+Current demonstrators include an iPad-based rehearsal platform, mixed-reality rehearsal prototypes, responsive virtual band members, DAW-oriented ensemble simulation, and avatar recording and playback pipelines.
 
-> Design is not just what it looks like and feels like. Design is how it works.
+These systems are designed for pilots with educators, musicians, researchers, and creative technology partners. Short demo videos and screenshots will be added as prototypes mature.
 
-Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-
-Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+*Get in touch if you would like to discuss a demo, pilot, or collaboration.*

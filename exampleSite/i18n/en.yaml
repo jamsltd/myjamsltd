@@ -1,9 +1,9 @@
 - id: blogTitle
-  translation: Latest Post
+  translation: Latest News
 - id: readMore
   translation: Read more
 - id: viewAllPost
-  translation: View All Post
+  translation: View All News
 - id: share
   translation: Share
 - id: aboutAuthor
@@ -15,9 +15,9 @@
 - id: about
   translation: About Us
 - id: services
-  translation: Service
+  translation: Technology
 - id: portfolio
-  translation: Portfolio
+  translation: Prototypes
 - id: team
   translation: Team
 - id: pricing

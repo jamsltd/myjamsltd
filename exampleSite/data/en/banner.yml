@@ -5,8 +5,8 @@ banner:
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "Rehearsal Reimagined"
-  content : "We bring cutting-edge research in immersive technologies to musicians, educators, and creators. Our tools enable musicians to rehearse and perform together — anytime, anywhere — using responsive virtual bandmates and augmented reality."
+  content : "MyJAMS develops research-backed rehearsal and performance technologies for musicians, educators, and creative partners. Our responsive virtual bandmates listen, adapt, and coordinate with real performers across iPad, XR, Vision Pro, DAW, and installation environments."
   button:
     enable : true
-    label : "Contact Us"
+    label : "Book a demo"
     link : "#contact"

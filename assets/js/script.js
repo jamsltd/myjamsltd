@@ -39,19 +39,30 @@ jQuery(function ($) {
 	/*	Portfolio Filtering Hook
 	/* =========================================================================  */
 
-	var containerEl = document.querySelector('.shuffle-wrapper');
-	if (containerEl) {
-		var Shuffle = window.Shuffle;
-		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-			itemSelector: '.shuffle-item',
-			buffer: 1
-		});
+	var $portfolioFilter = $('.portfolio-filter');
+	var $portfolioItems = $('.shuffle-wrapper .shuffle-item');
+	if ($portfolioFilter.length && $portfolioItems.length) {
+		function filterPortfolioItems(filterValue) {
+			$portfolioItems.each(function () {
+				var groups = $(this).data('groups') || [];
+				var shouldShow = filterValue === 'all' || groups.indexOf(filterValue) !== -1;
+				$(this).toggle(shouldShow);
+			});
+		}
 
-		jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-			var input = evt.currentTarget;
-			if (input.checked) {
-				myShuffle.filter(input.value);
-			}
+		$portfolioFilter.on('click', '.btn', function (evt) {
+			evt.preventDefault();
+
+			var $button = $(this);
+			var $input = $button.find('input[name="shuffle-filter"]');
+			var filterValue = $input.val();
+
+			$portfolioFilter.find('.btn').removeClass('active');
+			$button.addClass('active');
+			$portfolioFilter.find('input[name="shuffle-filter"]').prop('checked', false);
+			$input.prop('checked', true);
+
+			filterPortfolioItems(filterValue);
 		});
 	}
 

@@ -1,0 +1,28 @@
+################################# Technology #################################
+service:
+  enable : true
+  title : Core Technology
+  service_item :
+    - name : Adaptive Virtual Musicians
+      icon : ti-music-alt
+      content : Responsive performers that adjust timing and coordination to the person playing, rather than simply replaying fixed tracks.
+
+    - name : Timing Realism
+      icon : ti-timer
+      content : Interaction models grounded in research on synchronisation, temporal adaptation, and ensemble coordination.
+
+    - name : Immersive Rehearsal
+      icon : ti-eye
+      content : XR rehearsal environments for iPad, VR, AR, Apple Vision Pro, and multi-user audiovisual spaces.
+
+    - name : AI Performance Systems
+      icon : ti-control-shuffle
+      content : AI-assisted avatar animation, sound generation, synchronisation, and interactive performance pipelines.
+
+    - name : Cross-Platform Ecosystem
+      icon : ti-layout-grid3
+      content : Tools that connect mobile rehearsal, XR prototypes, DAW workflows, and physical installations.
+
+    - name : Ecological Validity
+      icon : ti-user
+      content : Virtual rehearsal systems designed around realistic musical behaviour, social presence, and ensemble practice needs.

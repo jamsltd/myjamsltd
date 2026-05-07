@@ -1,7 +1,7 @@
 ---
 title: "ICURe Explore Journey"
 date: 2024-11-18T10:00:00+01:00
-image_webp: images/blog/icure-explore.webp
+image_webp: images/blog/icure-explore.jpg
 image: images/blog/icure-explore.jpg
 author: MyJAMS Team
 description : "Our participation in ICURe Explore phase."

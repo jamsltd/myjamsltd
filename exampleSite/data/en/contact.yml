@@ -3,7 +3,7 @@ contact:
   enable : true
   title : Contact Us
   subtitle : Contact Details
-  content :      To get in touch, please fill in the form on the right.
+  content :      Tell us whether you would like to book a demo, discuss a pilot, explore a research collaboration, or develop an installation.
 
   # Contact details
   contact_list:

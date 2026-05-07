@@ -1,7 +1,7 @@
 ---
 title: "Internships at MyJAMS Ltd"
 date: 2025-07-01T10:00:00+01:00
-image_webp: images/blog/internships.webp
+image_webp: images/blog/internships.jpg
 image: images/blog/internships.jpg
 author: MyJAMS Team
 description : "Welcoming talented interns to the MyJAMS journey."

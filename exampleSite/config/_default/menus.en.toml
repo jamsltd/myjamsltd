@@ -6,22 +6,26 @@ url = "#about"
 weight = 1
 
 [[main]]
-name = "services"
+name = "technology"
 url = "#services"
 weight = 2
 
 [[main]]
-name = "portfolio"
+name = "prototypes"
 url = "#portfolio"
 weight = 3
 
 [[main]]
-name = "team"
-url = "#team"
+name = "impact"
+url = "#feature"
 weight = 4
+
+[[main]]
+name = "news"
+url = "#blog"
+weight = 5
 
 [[main]]
 name = "contact"
 url = "#contact"
-weight = 7
-
+weight = 6

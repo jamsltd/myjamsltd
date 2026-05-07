@@ -1,7 +1,7 @@
 ---
 title: "MyJAMS Ltd Founded"
 date: 2024-06-20T10:00:00+01:00
-image_webp: images/blog/myjams-founded.webp
+image_webp: images/blog/myjams-founded.jpg
 image: images/blog/myjams-founded.jpg
 author: MyJAMS Team
 description : "The beginning of MyJAMS Ltd as a spin-out company."

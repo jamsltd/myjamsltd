@@ -1,4 +1,5 @@
-{{ if gt (where site.RegularPages "Section" "==" "blog") 0}}
+{{ $posts := where site.RegularPages "Section" "==" "blog" }}
+{{ if gt (len $posts) 0}}
 {{"<!-- Start Blog Section -->" | safeHTML}}
 <section id="blog" class="section">
 	<div class="container">
@@ -13,8 +14,12 @@
 			</div>
 			{{"<!-- /section title -->" | safeHTML}}
 
-			{{ range first 3 (where site.RegularPages "Section" "==" "blog")}}
-			{{ .Render "article"}}
+			{{ $.Scratch.Set "visiblePosts" 0 }}
+			{{ range $posts }}
+			{{ if and (not (in (slice "installation.md" "simple-blog-post-1.md") .File.LogicalName)) (lt ($.Scratch.Get "visiblePosts") 3) }}
+			{{ .Render "article" }}
+			{{ $.Scratch.Set "visiblePosts" (add ($.Scratch.Get "visiblePosts") 1) }}
+			{{ end }}
 			{{ end }}
 
 			<div class="all-post text-center col-lg-12">

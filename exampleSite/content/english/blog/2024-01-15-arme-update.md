@@ -1,7 +1,7 @@
 ---
 title: "ARME: Augmented Reality Music Ensemble"
 date: 2024-01-15T10:00:00+01:00
-image_webp: images/blog/arme.webp
+image_webp: images/blog/arme.jpg
 image: images/blog/arme.jpg
 author: MyJAMS Team
 description : "Introducing ARME, our flagship research project."

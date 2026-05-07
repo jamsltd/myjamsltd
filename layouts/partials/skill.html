@@ -17,13 +17,14 @@
 			{{"<!-- /section title -->" | safeHTML }}
 		</div>
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="{{ if .skill_item }}col-lg-6{{ else }}col-lg-8 mx-auto text-center{{ end }}">
 				<h2>{{ .subtitle | markdownify }}</h2>
 				<p> {{ .content | markdownify }}</p>
 				{{ with .image }}
 				{{ partial "image.html" (dict "Src" . "Alt" "Image" "Class" "img-fluid lozad" ) }}
 				{{ end }}
 			</div>
+			{{ if .skill_item }}
 			<div class="col-lg-6">
 				<ul class="skill-bar">
 					{{ $.Scratch.Set "counter" 0 }}
@@ -40,6 +41,7 @@
 					{{ end }}
 				</ul>
 			</div>
+			{{ end }}
 		</div>
 	</div>
 </section>

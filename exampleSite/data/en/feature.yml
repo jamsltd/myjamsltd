@@ -3,23 +3,27 @@ feature:
   enable : true
   image : images/about/uob-tier-one-photography-091123-139.jpg
   image_webp : images/about/uob-tier-one-photography-091123-139.webp
-  title : Use Cases
-  content : "Our platform allows users to rehearse with virtual avatars of musicians that adapt in real-time to the player’s timing and interpretation. Whether you’re a soloist preparing for a quartet, a music teacher looking to enrich practice, or an institution offering immersive learning, ARME scales with your needs."
+  title : Impact and Applications
+  content : "MyJAMS technologies support music education, rehearsal, performance, research, and inclusive participation in collaborative music-making."
   feature_item : 
       # feature item loop
     - title : Music Education
       icon : ti-book  # themify icon pack : https://themify.me/themify-icons
-      content : Individual and group practice with adjustable difficulty and feedback.
+      content : Ensemble rehearsal support for schools, conservatoires, universities, and independent learners.
       
       # feature item loop
-    - title : Professional Rehearsal
+    - title : Performance and Media
       icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Flexibility when in-person rehearsals aren’t possible.  
+      content : Immersive concerts, interactive audiovisual experiences, virtual performers, and digital production.  
       
       # feature item loop
-    - title : Public Engagement
+    - title : Research and HCI
       icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Interactive installations and experiences for festivals, museums, and schools.
+      content : Tools for studying timing, coordination, social interaction, and embodied AI in XR.
+
+    - title : Accessibility
+      icon : ti-heart # themify icon pack : https://themify.me/themify-icons
+      content : New forms of remote, asynchronous, and adaptive participation in ensemble music-making.
       
       #ti-music-alt
       #ti-panel

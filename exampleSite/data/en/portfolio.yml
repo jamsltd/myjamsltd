@@ -1,0 +1,60 @@
+#################################### Products and Prototypes ###############################
+portfolio:
+  enable : true
+  title : Products and Prototypes
+  portfolio_item :
+    - name : iPad Rehearsal Platform
+      image : images/about/uob-tier-one-photography-091123-135.jpg
+      image_webp : images/about/uob-tier-one-photography-091123-135.webp
+      categories : ["rehearsal", "education"]
+      content : Portable rehearsal with responsive virtual ensemble partners for practice and teaching.
+      link : "#contact"
+
+    - name : Vision Pro / XR Rehearsal
+      image : images/about/uob-tier-one-photography-091123-137.jpg
+      image_webp : images/about/uob-tier-one-photography-091123-137.webp
+      categories : ["xr", "rehearsal"]
+      content : Immersive rehearsal prototypes that place adaptive musicians into mixed-reality practice spaces.
+      link : "#contact"
+
+    - name : Responsive Virtual Band Members
+      image : images/about/uob-tier-one-photography-091123-146.jpg
+      image_webp : images/about/uob-tier-one-photography-091123-146.webp
+      categories : ["ai", "performance"]
+      content : Virtual performers that coordinate dynamically with a musician's timing and interpretation.
+      link : "#contact"
+
+    - name : Multi-User Audiovisual Spaces
+      image : images/about/uob-tier-one-photography-091123-151.jpg
+      image_webp : images/about/uob-tier-one-photography-091123-151.webp
+      categories : ["xr", "performance"]
+      content : Shared rehearsal and performance environments for collaborative music-making in immersive media.
+      link : "#contact"
+
+    - name : DAW Ensemble Simulation
+      image : images/about/audio.jpg
+      image_webp : images/about/audio.webp
+      categories : ["creative tools", "ai"]
+      content : Plugin workflows for simulating interactive ensemble partners inside music production environments.
+      link : "#contact"
+
+    - name : Avatar Recording Pipeline
+      image : images/about/camera.jpg
+      image_webp : images/about/camera.webp
+      categories : ["creative tools", "performance"]
+      content : Recording, playback, and animation pipelines for expressive virtual musician avatars.
+      link : "#contact"
+
+    - name : 100-Metronome Installation
+      image : images/about/recording.jpg
+      image_webp : images/about/recording.webp
+      categories : ["installations", "public engagement"]
+      content : An interactive public installation exploring timing, coordination, and collective rhythm.
+      link : "#contact"
+
+    - name : Museum XR Experiences
+      image : images/about/depthmap.jpg
+      image_webp : images/about/depthmap.webp
+      categories : ["installations", "xr"]
+      content : Immersive music and heritage experiences for museums, festivals, schools, and public venues.
+      link : "#contact"

@@ -1,0 +1,7 @@
+################################# Research ##################################
+skill:
+  enable : true
+  title : Research and Innovation
+  subtitle : Scientific credibility is central to MyJAMS.
+  content : The company translates the EPSRC-funded ARME research programme into commercial and educational XR music technologies. Our work connects computational neuroscience, psychophysics, immersive media, human-computer interaction, and creative AI to build virtual musicians that behave like collaborators, not backing tracks.
+  image : images/about/company-growth.webp

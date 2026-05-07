@@ -1,7 +1,7 @@
 ---
 title: "Kenilworth Revealed"
 date: 2025-10-03T10:00:00+01:00
-image_webp: images/blog/kenilworth.webp
+image_webp: images/blog/kenilworth.jpg
 image: images/blog/kenilworth.jpg
 author: MyJAMS Team
 description : "An AR experience bringing Kenilworth’s history to life."
