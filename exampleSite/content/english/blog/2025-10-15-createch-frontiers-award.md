@@ -1,8 +1,9 @@
 ---
 title: "MyJAMS Receives CreaTech Frontiers Award"
 date: 2025-10-15T10:00:00+01:00
-image_webp: images/blog/createch-frontiers.jpg
-image: images/blog/createch-frontiers.jpg
+image_webp: images/blog/createch-logo.svg
+image: images/blog/createch-logo.svg
+logo_image: true
 author: MyJAMS Team
 description : "MyJAMS has received support from CreaTech Frontiers to develop immersive music technology for rehearsal and performance."
 ---
