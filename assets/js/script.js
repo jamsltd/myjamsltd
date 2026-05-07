@@ -66,6 +66,18 @@ jQuery(function ($) {
 		});
 	}
 
+	$('[data-comparison-slider]').each(function () {
+		var slider = this;
+		var range = slider.querySelector('.comparison-slider__range');
+
+		function updateSlider() {
+			slider.style.setProperty('--position', range.value + '%');
+		}
+
+		range.addEventListener('input', updateSlider);
+		updateSlider();
+	});
+
 	/* ========================================================================= */
 	/*	Testimonial Carousel
 	/* =========================================================================  */

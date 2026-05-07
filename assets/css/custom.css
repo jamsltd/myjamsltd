@@ -39,3 +39,118 @@
   max-height: 220px;
   object-fit: contain;
 }
+
+.comparison-slider {
+  --position: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  margin: 32px auto;
+  max-width: 760px;
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+  width: 100%;
+}
+
+.comparison-slider__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.comparison-slider__overlay {
+  height: 100%;
+  inset: 0 auto 0 0;
+  overflow: hidden;
+  position: absolute;
+  width: var(--position);
+}
+
+.comparison-slider__overlay .comparison-slider__image {
+  max-width: none;
+  min-width: 100%;
+  width: auto;
+}
+
+.comparison-slider__range {
+  appearance: none;
+  background: transparent;
+  cursor: ew-resize;
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.comparison-slider__handle {
+  background: rgba(255, 172, 117, 0.95);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  height: 48px;
+  left: var(--position);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  z-index: 2;
+}
+
+.comparison-slider__handle::before {
+  background: rgba(255, 172, 117, 0.95);
+  bottom: -100vh;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: -100vh;
+  transform: translateX(-50%);
+  width: 3px;
+}
+
+.comparison-slider__handle span::before,
+.comparison-slider__handle span::after {
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comparison-slider__handle span::before {
+  border-right: 8px solid #ffffff;
+  left: 13px;
+}
+
+.comparison-slider__handle span::after {
+  border-left: 8px solid #ffffff;
+  right: 13px;
+}
+
+.comparison-slider__label {
+  background: rgba(18, 22, 28, 0.72);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 8px 10px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 16px;
+  z-index: 1;
+}
+
+.comparison-slider__label--then {
+  left: 16px;
+}
+
+.comparison-slider__label--now {
+  right: 16px;
+}
