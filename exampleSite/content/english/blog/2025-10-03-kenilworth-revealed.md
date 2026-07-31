@@ -8,7 +8,7 @@ description : "An AR experience bringing Kenilworth’s history to life."
 hide_page_image: true
 ---
 
-MyJams contributed to Kenilworth Revealed, an augmented reality project that uncovers the hidden stories of the town. Through interactive technology, visitors can explore history in a new and engaging way.
+MyJAMS contributed to Kenilworth Revealed, an augmented reality project that uncovers the hidden stories of the town. Through interactive technology, visitors can explore history in a new and engaging way.
 
 The project is a useful example of how MyJAMS technology can support heritage, education, and immersive public engagement. Kenilworth Town Council describes how people filmed by MyJAMS Ltd / University of Birmingham were inserted into the reconstructed medieval environment, while Zubr's project case study explains how filmed historical characters were embedded into the AR experience alongside 3D reconstructions and spatial audiovisual scenes.
 

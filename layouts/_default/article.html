@@ -1,4 +1,4 @@
-<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
+<article class="col-lg-4 col-md-6 col-12 d-flex clearfix wow fadeInUp mb-4" data-wow-duration="500ms">
   <div class="post-block">
     <div class="media-wrapper{{ if .Params.logo_image }} logo-image{{ end }}">
       {{ partial "image.html" (dict "Src" .Params.Image_webp "Alt" "Image" "Class" "img-fluid lozad") }}
@@ -6,7 +6,7 @@
 
     <div class="content">
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p>{{ .Summary }}</p>
+      <div class="post-summary">{{ .Summary }}</div>
       <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
     </div>
   </div>

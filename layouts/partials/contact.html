@@ -41,7 +41,10 @@
 
         <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="form-meghna">
           <input type="hidden" name="form-name" value="contact">
-          <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="bot-field">Leave this field empty</label>
+            <input type="text" name="bot-field" id="bot-field" tabindex="-1" autocomplete="off">
+          </div>
 
           <div class="form-group">
             <input type="text" placeholder="{{ .name }}" class="form-control" name="name" id="name" required>

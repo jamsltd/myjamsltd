@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "https://myjamsltd.netlify.app"
-title = "MyJams Ltd"
+title = "MyJAMS Ltd"
 theme = "meghna-hugo"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "Europe/London"
@@ -94,7 +94,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "images/myjams-logo.png"
 # Meta data
 description = "Research-backed adaptive virtual musicians for rehearsal, education, XR performance, and interactive installations."
 author = "MyJAMS Ltd"
@@ -106,7 +106,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = false
-preloader = "images/logo.png"
+preloader = "images/myjams-logo.png"
 
 # cookies
 [params.cookies]
@@ -137,7 +137,7 @@ contentDir = "content/english"
 [Languages.en.params]
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; MyJams LTD UK 2025; Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+copyright = "MyJAMS Ltd, UK; Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
 
 
 

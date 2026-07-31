@@ -1,0 +1,35 @@
+case_studies:
+  enable: true
+  title: Selected Case Studies
+  content: Concise examples of how the research and technology have been applied, using outcomes documented by the project.
+  studies:
+    - title: Adaptive Ensemble Rehearsal
+      status: Research programme
+      image_webp: images/blog/arme.jpg
+      user: String-quartet musicians rehearsing without a complete live ensemble.
+      problem: Fixed backing tracks cannot respond to changes in a performer's timing and interpretation.
+      intervention: ARME paired performers with responsive virtual musicians in augmented rehearsal environments.
+      outcome: The programme established the research foundation for MyJAMS' current iPad, XR and adaptive-ensemble demonstrators.
+      link: /blog/2024-01-15-arme-update/
+      link_label: Read about ARME
+
+    - title: Kenilworth Revealed
+      status: Public deployment
+      image_webp: images/blog/kenilworth-revealed-ar.png
+      user: Visitors exploring St Mary's Abbey and Abbey Fields.
+      problem: Historic characters and reconstructed spaces needed to be presented in their original location.
+      intervention: Filmed historical characters and performances were integrated into a 3D AR reconstruction with spatial audiovisual scenes.
+      outcome: A public AR visitor experience was launched, followed by guided demonstrations at the May 2026 Living History Afternoon.
+      link: /blog/2025-10-03-kenilworth-revealed/
+      link_label: View the public case study
+
+    - title: From Research to Venture
+      status: Commercial discovery
+      image_webp: images/blog/icure-explore-logo.png
+      logo_image: true
+      user: The MyJAMS founding team and prospective product partners.
+      problem: Academic demonstrators required market evidence and a clearer route towards adoption.
+      intervention: ICURe Explore supported stakeholder discovery, followed by strategy and investor engagement through ICURe Exploit.
+      outcome: The work refined the commercial strategy and informed progression from research demonstrators towards products.
+      link: /blog/2025-03-05-icure-exploit/
+      link_label: Read the ICURe update

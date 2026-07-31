@@ -154,3 +154,457 @@
 .comparison-slider__label--now {
   right: 16px;
 }
+
+/* Readability and keyboard accessibility */
+html,
+body {
+  color: #c4cdd5;
+}
+
+.portfolio-filter .btn,
+.post-time,
+.simple-icon {
+  color: #c4cdd5;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #57cbcc !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #1d2024;
+}
+
+/* Compact site identity and navigation */
+.navbar {
+  min-height: 100px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.navbar-brand img {
+  display: block;
+  height: 92px;
+  object-fit: contain;
+  width: auto;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Permanently visible, equal-height portfolio cards */
+.shuffle-item {
+  display: flex;
+}
+
+.portfolio-block {
+  background: #292f36;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.portfolio-block::before {
+  display: none;
+}
+
+.portfolio-block > picture,
+.portfolio-block > img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.portfolio-block > picture img,
+.portfolio-block > img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.portfolio-block .caption,
+.portfolio-block:hover .caption {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  left: auto;
+  min-height: 205px;
+  opacity: 1;
+  padding: 20px;
+  position: static;
+  text-align: center;
+  top: auto;
+  transform: none;
+}
+
+.portfolio-block .caption h4,
+.portfolio-block:hover .caption h4 {
+  top: auto;
+}
+
+.portfolio-block .caption h4 a {
+  color: #ffffff;
+}
+
+.portfolio-block .caption p {
+  color: #c4cdd5;
+  margin-bottom: 0;
+}
+
+.portfolio-block .caption .search-icon {
+  flex: 0 0 auto;
+  height: 44px;
+  width: 44px;
+}
+
+.portfolio-block .caption .search-icon i {
+  line-height: 44px;
+}
+
+/* Equal-height team cards with persistent social links */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.member-photo {
+  aspect-ratio: 1 / 1;
+  background: #1d2024;
+}
+
+.member-photo picture {
+  display: block;
+  height: 100%;
+}
+
+.member-photo img,
+.member-photo:hover img {
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  width: 100%;
+}
+
+.member-meta {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.member-meta p {
+  flex: 1 1 auto;
+}
+
+.member-social {
+  margin: auto 0 0;
+  padding-top: 12px;
+}
+
+.member-social li a {
+  align-items: center;
+  background: #1d2024;
+  border: 1px solid #57cbcc;
+  color: #ffffff;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.member-social li a:hover {
+  background: #57cbcc;
+  color: #1d2024;
+}
+
+/* Equal-height news cards */
+.post-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-block .content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.post-block .post-summary {
+  flex: 1 1 auto;
+  margin-bottom: 16px;
+}
+
+.post-block .post-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.post-block .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Visible footer social identity and responsive logo */
+.social-icon ul li a {
+  border-color: #57cbcc;
+}
+
+.social-icon ul li a i {
+  color: #57cbcc;
+  opacity: 1;
+}
+
+.copyright img {
+  height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    min-height: 86px;
+  }
+
+  .navbar-brand img {
+    height: 78px;
+  }
+
+  .portfolio-block .caption {
+    min-height: 0;
+  }
+
+  .copyright img {
+    height: 150px;
+  }
+}
+
+/* Netlify spam field: present for automated filtering, absent from the visual flow */
+.form-honeypot {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  display: none !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+/* Prototype maturity */
+.prototype-status,
+.case-study-status {
+  background: rgba(87, 203, 204, 0.12);
+  border: 1px solid #57cbcc;
+  color: #9ce7e8;
+  display: inline-block;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  padding: 6px 9px;
+  text-transform: uppercase;
+}
+
+.prototype-status {
+  margin-top: 14px;
+}
+
+.portfolio-block .caption,
+.portfolio-block:hover .caption {
+  min-height: 245px;
+}
+
+/* Research, funding and delivery credibility band */
+.credibility-band {
+  border-bottom: 1px solid rgba(236, 239, 241, 0.1);
+  border-top: 1px solid rgba(236, 239, 241, 0.1);
+  padding: 44px 0;
+}
+
+.credibility-intro h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.credibility-intro p {
+  margin: 0 auto 24px;
+  max-width: 760px;
+}
+
+.credibility-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 0;
+}
+
+.credibility-list li {
+  display: flex;
+  flex: 1 1 190px;
+  max-width: 235px;
+}
+
+.credibility-list a {
+  background: #292f36;
+  border-bottom: 3px solid #57cbcc;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 92px;
+  padding: 15px;
+  text-align: center;
+}
+
+.credibility-list strong {
+  color: #ffffff;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 17px;
+}
+
+.credibility-list span {
+  color: #c4cdd5;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Evidence-led case studies */
+.section-intro {
+  color: #c4cdd5;
+  margin: 22px auto 0;
+  max-width: 760px;
+}
+
+.case-study-card {
+  background: #292f36;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.case-study-image {
+  aspect-ratio: 16 / 10;
+  background: #1d2024;
+  overflow: hidden;
+}
+
+.case-study-image picture,
+.case-study-image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.case-study-image img {
+  object-fit: cover;
+}
+
+.case-study-image.logo-image {
+  background: #ffffff;
+}
+
+.case-study-image.logo-image img {
+  object-fit: contain;
+  padding: 30px;
+}
+
+.case-study-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.case-study-content h3 {
+  font-size: 23px;
+  margin: 15px 0 18px;
+}
+
+.case-study-content dl {
+  flex: 1 1 auto;
+  margin-bottom: 22px;
+}
+
+.case-study-content dl > div {
+  border-top: 1px solid rgba(236, 239, 241, 0.1);
+  padding: 11px 0;
+}
+
+.case-study-content dt {
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.case-study-content dd {
+  color: #c4cdd5;
+  margin: 4px 0 0;
+}
+
+.case-study-content .btn {
+  align-self: flex-start;
+}
+
+/* Current, labelled article-sharing controls */
+.social-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-share h4 {
+  flex: 0 0 100%;
+}
+
+.social-share .resp-sharing-button__link {
+  margin: 0;
+}
+
+.social-share .resp-sharing-button {
+  align-items: center;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+}
+
+.resp-sharing-button--x {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.resp-sharing-button--x:hover,
+.resp-sharing-button--x:active {
+  background-color: #222222;
+  border-color: #222222;
+}
+
+.resp-sharing-button--linkedin {
+  background-color: #0a66c2;
+  border-color: #0a66c2;
+}
+
+@media (max-width: 767px) {
+  .credibility-list li {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .portfolio-block .caption,
+  .portfolio-block:hover .caption {
+    min-height: 245px;
+  }
+}

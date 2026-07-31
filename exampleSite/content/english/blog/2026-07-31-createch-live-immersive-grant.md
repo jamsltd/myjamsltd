@@ -1,5 +1,5 @@
 ---
-title: "MyJAMS Awarded £25,000 for Immersive R&D"
+title: "£25,000 Live & Immersive R&D Grant Awarded to MyJAMS"
 date: 2026-07-31T12:00:00+01:00
 image_webp: images/blog/createch-live-immersive.webp
 image: images/blog/createch-live-immersive.png

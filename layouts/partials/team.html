@@ -18,19 +18,11 @@
 
       {{ range .team_member}}
       {{"<!-- team member -->" | safeHTML}}
-      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+      <div class="col-lg-3 col-md-6 col-12 d-flex wow fadeInDown" data-wow-duration="500ms">
         <div class="team-member">
           <div class="member-photo">
             {{"<!-- member photo -->" | safeHTML}}
             {{ partial "image.html" (dict "Src" .image_webp "Alt" .name "Class" "img-fluid lozad" ) }}
-            {{"<!-- member social profile -->" | safeHTML}}
-            <div class="mask">
-              <ul class="list-inline">
-                {{ range .social }}
-                <li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-                {{ end }}
-              </ul>
-            </div>
           </div>
 
           {{"<!-- member name & designation -->" | safeHTML}}
@@ -38,6 +30,12 @@
             <h4>{{ .name }}</h4>
             <span>{{ .designation | markdownify}}</span>
             <p>{{ .content | markdownify }}</p>
+            {{ $memberName := .name }}
+            <ul class="member-social list-inline" aria-label="{{ .name }} social links">
+              {{ range .social }}
+              <li class="list-inline-item"><a href="{{ .link | safeURL }}" aria-label="{{ $memberName }} — {{ .name }}"><i class="{{ .icon }}" aria-hidden="true"></i></a></li>
+              {{ end }}
+            </ul>
           </div>
         </div>
       </div>

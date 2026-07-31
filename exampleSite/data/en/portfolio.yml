@@ -4,6 +4,7 @@ portfolio:
   title : Products and Prototypes
   portfolio_item :
     - name : iPad Rehearsal Platform
+      maturity : Research prototype
       image : images/about/uob-tier-one-photography-091123-135.jpg
       image_webp : images/about/uob-tier-one-photography-091123-135.webp
       categories : ["rehearsal", "education"]
@@ -11,6 +12,7 @@ portfolio:
       link : "#contact"
 
     - name : Vision Pro / XR Rehearsal
+      maturity : Research prototype
       image : images/about/uob-tier-one-photography-091123-137.jpg
       image_webp : images/about/uob-tier-one-photography-091123-137.webp
       categories : ["xr", "rehearsal"]
@@ -18,6 +20,7 @@ portfolio:
       link : "#contact"
 
     - name : Responsive Virtual Band Members
+      maturity : Available for demonstration
       image : images/about/uob-tier-one-photography-091123-146.jpg
       image_webp : images/about/uob-tier-one-photography-091123-146.webp
       categories : ["ai", "performance"]
@@ -25,6 +28,7 @@ portfolio:
       link : "#contact"
 
     - name : Multi-User Audiovisual Spaces
+      maturity : Research prototype
       image : images/about/uob-tier-one-photography-091123-151.jpg
       image_webp : images/about/uob-tier-one-photography-091123-151.webp
       categories : ["xr", "performance"]
@@ -32,6 +36,7 @@ portfolio:
       link : "#contact"
 
     - name : DAW Ensemble Simulation
+      maturity : Research prototype
       image : images/about/audio.jpg
       image_webp : images/about/audio.webp
       categories : ["creative tools", "ai"]
@@ -39,6 +44,7 @@ portfolio:
       link : "#contact"
 
     - name : Avatar Recording Pipeline
+      maturity : Available for demonstration
       image : images/about/camera.jpg
       image_webp : images/about/camera.webp
       categories : ["creative tools", "performance"]
@@ -46,6 +52,7 @@ portfolio:
       link : "#contact"
 
     - name : 100-Metronome Installation
+      maturity : Available for demonstration
       image : images/about/recording.jpg
       image_webp : images/about/recording.webp
       categories : ["installations", "public engagement"]
@@ -53,6 +60,7 @@ portfolio:
       link : "#contact"
 
     - name : Museum XR Experiences
+      maturity : Available for demonstration
       image : images/about/depthmap.jpg
       image_webp : images/about/depthmap.webp
       categories : ["installations", "xr"]

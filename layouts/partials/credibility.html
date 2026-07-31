@@ -1,0 +1,24 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.credibility.credibility.enable }}
+{{ with $data.credibility.credibility }}
+<section id="credibility" class="credibility-band section-bg" aria-labelledby="credibility-title">
+  <div class="container">
+    <div class="credibility-intro text-center">
+      <h2 id="credibility-title">{{ .title }}</h2>
+      <p>{{ .content }}</p>
+    </div>
+    <ul class="credibility-list list-unstyled">
+      {{ range .organisations }}
+      <li>
+        <a href="{{ .link | safeURL }}" target="_blank" rel="noopener">
+          <strong>{{ .name }}</strong>
+          <span>{{ .relationship }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+{{ end }}

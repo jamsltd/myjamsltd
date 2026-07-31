@@ -1,0 +1,39 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.case_studies.case_studies.enable }}
+{{ with $data.case_studies.case_studies }}
+<section id="case-studies" class="case-studies section" aria-labelledby="case-studies-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="title text-center">
+          <h2 id="case-studies-title">{{ .title }}</h2>
+          <div class="border-meghna"></div>
+          <p class="section-intro">{{ .content }}</p>
+        </div>
+      </div>
+      {{ range .studies }}
+      <div class="col-lg-4 col-md-6 col-12 d-flex mb-4">
+        <article class="case-study-card">
+          <div class="case-study-image{{ if .logo_image }} logo-image{{ end }}">
+            {{ partial "image.html" (dict "Src" .image_webp "Alt" .title "Class" "img-fluid lozad") }}
+          </div>
+          <div class="case-study-content">
+            <span class="case-study-status">{{ .status }}</span>
+            <h3>{{ .title }}</h3>
+            <dl>
+              <div><dt>User</dt><dd>{{ .user }}</dd></div>
+              <div><dt>Problem</dt><dd>{{ .problem }}</dd></div>
+              <div><dt>Intervention</dt><dd>{{ .intervention }}</dd></div>
+              <div><dt>Outcome</dt><dd>{{ .outcome }}</dd></div>
+            </dl>
+            <a class="btn btn-transparent" href="{{ .link | relURL }}">{{ .link_label }}</a>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

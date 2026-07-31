@@ -1,0 +1,20 @@
+credibility:
+  enable: true
+  title: Research, Funding and Delivery Network
+  content: Selected relationships supporting the research, translation and public application of MyJAMS technologies.
+  organisations:
+    - name: University of Birmingham
+      relationship: Research origin
+      link: https://www.birmingham.ac.uk/
+    - name: ARME
+      relationship: Foundational research programme
+      link: https://arme-project.co.uk/
+    - name: CreaTech Frontiers
+      relationship: Innovation funding and support
+      link: https://createchfrontiers.com/
+    - name: AHRC / UKRI
+      relationship: CreaTech Frontiers programme funder
+      link: https://www.ukri.org/councils/ahrc/
+    - name: Kenilworth Revealed
+      relationship: Public delivery with Kenilworth Town Council and Zubr
+      link: https://kenilworth-tc.gov.uk/kenilworth-revealed-augmented-reality-app-brings-history-to-life-and-visitors-to-the-town/

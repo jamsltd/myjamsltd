@@ -9,14 +9,17 @@ team:
       image : images/team/massimiliano-di-luca.jpg
       designation : Scientific Lead / Co-Founder
       content : >
-        Massimiliano (Max) Di Luca is Associate Professor at the University of Birmingham, where he leads the Virtual Reality Lab (https://virtualrealitylab.netlify.app) and is the PI of the ARME Project (https://arme-project.co.uk). At MyJAMS Ltd, Max ensures the scientific rigour and innovation
+        Massimiliano (Max) Di Luca is Associate Professor at the University of Birmingham, where he leads the [Virtual Reality Lab](https://virtualrealitylab.netlify.app) and is the PI of the [ARME Project](https://arme-project.co.uk). At MyJAMS Ltd, Max ensures the scientific rigour and innovation
         of the technology, guiding its development from experimental prototypes to impactful products.
       social :
-        - icon : ti-linkedin
+        - name : LinkedIn
+          icon : ti-linkedin
           link : "https://www.linkedin.com/in/maxdiluca"
-        - icon : ti-github
+        - name : GitHub
+          icon : ti-github
           link : "https://github.com/maxdiluca"
-        - icon : ti-world
+        - name : Website
+          icon : ti-world
           link : "https://massimilianodiluca.info"
 
     # team member loop
@@ -26,10 +29,11 @@ team:
       designation : Entrepreneurial Lead / Co-Founder
       content : >
         Diar is a research scientist and prototyping expert with a background in neuroscience and virtual reality,
-        and co-founder of Obi Robotics (https://www.obirobotics.com), and Motiondynamics (https://motiondynamics.ai). At MyJAMS Ltd, Diar drives innovation and translation of cutting-edge research into products,
+        and co-founder of [Obi Robotics](https://www.obirobotics.com) and [Motiondynamics](https://motiondynamics.ai). At MyJAMS Ltd, Diar drives innovation and translation of cutting-edge research into products,
         working closely with musicians, technologists, and partners to deliver novel rehearsal and performance platforms.
       social :
-        - icon : ti-linkedin
+        - name : LinkedIn
+          icon : ti-linkedin
           link : "https://www.linkedin.com/in/diar-karim"
 
     # team member loop
@@ -40,9 +44,12 @@ team:
       content : >
         Arindam is a developer with interests in virtual reality, haptics, UI/UX, and game development. He holds an MSc in Human-Computer Interaction from the University of Birmingham and contributes to the development of MyJAMS' immersive music technology.
       social :
-        - icon : ti-linkedin
+        - name : LinkedIn
+          icon : ti-linkedin
           link : "https://www.linkedin.com/in/arin99/"
-        - icon : ti-github
+        - name : GitHub
+          icon : ti-github
           link : "https://github.com/Arid99t"
-        - icon : ti-world
+        - name : Website
+          icon : ti-world
           link : "https://virtualrealitylab.netlify.app/author/arindam-dutta/"

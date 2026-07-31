@@ -7,22 +7,22 @@ service:
       icon : ti-music-alt
       content : Responsive performers that adjust timing and coordination to the person playing, rather than simply replaying fixed tracks.
 
-    - name : Timing Realism
+    - name : Natural Timing and Coordination
       icon : ti-timer
-      content : Interaction models grounded in research on synchronisation, temporal adaptation, and ensemble coordination.
+      content : Performers respond naturally to changes in tempo and interpretation, using research models of synchronisation, temporal adaptation, and ensemble coordination.
 
     - name : Immersive Rehearsal
       icon : ti-eye
       content : XR rehearsal environments for iPad, VR, AR, Apple Vision Pro, and multi-user audiovisual spaces.
 
-    - name : AI Performance Systems
+    - name : Responsive Digital Performers
       icon : ti-control-shuffle
-      content : AI-assisted avatar animation, sound generation, synchronisation, and interactive performance pipelines.
+      content : Digital musicians combine AI-assisted avatar animation, sound generation, synchronisation, and interactive performance pipelines.
 
-    - name : Cross-Platform Ecosystem
+    - name : Connected Rehearsal Tools
       icon : ti-layout-grid3
       content : Tools that connect mobile rehearsal, XR prototypes, DAW workflows, and physical installations.
 
-    - name : Ecological Validity
+    - name : Realistic Ensemble Behaviour
       icon : ti-user
-      content : Virtual rehearsal systems designed around realistic musical behaviour, social presence, and ensemble practice needs.
+      content : Virtual rehearsal systems designed around realistic musical behaviour, social presence, and ensemble practice needs—an approach researchers describe as ecological validity.
