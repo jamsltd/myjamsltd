@@ -122,6 +122,10 @@ map_longitude = "-1.927825815563642"
 map_marker = "images/marker.png"
 
 ############################# social icons ##########################
+[[params.social]]
+name = "LinkedIn"
+icon = "ti-linkedin"
+link = "https://www.linkedin.com/company/113208235/"
 
 
 ################################ English Language ########################

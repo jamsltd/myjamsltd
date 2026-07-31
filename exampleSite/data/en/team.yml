@@ -31,3 +31,18 @@ team:
       social :
         - icon : ti-linkedin
           link : "https://www.linkedin.com/in/diar-karim"
+
+    # team member loop
+    - name : Arindam Dutta
+      image_webp : images/team/arindam-dutta.webp
+      image : images/team/arindam-dutta.jpg
+      designation : Developer
+      content : >
+        Arindam is a developer with interests in virtual reality, haptics, UI/UX, and game development. He holds an MSc in Human-Computer Interaction from the University of Birmingham and contributes to the development of MyJAMS' immersive music technology.
+      social :
+        - icon : ti-linkedin
+          link : "https://www.linkedin.com/in/arin99/"
+        - icon : ti-github
+          link : "https://github.com/Arid99t"
+        - icon : ti-world
+          link : "https://virtualrealitylab.netlify.app/author/arindam-dutta/"
