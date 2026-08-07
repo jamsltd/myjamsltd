@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/uob-tier-one-photography-091123-139.jpg
-  image_webp : images/about/uob-tier-one-photography-091123-139.webp
+  image : images/backgrounds/impact-ensemble-rehearsal-rdne.jpg
+  image_webp : images/backgrounds/impact-ensemble-rehearsal-rdne.webp
   title : Impact and Applications
   content : "MyJAMS technologies support music education, rehearsal, performance, research, and inclusive participation in collaborative music-making."
   feature_item : 

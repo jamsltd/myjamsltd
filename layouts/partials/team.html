@@ -20,7 +20,7 @@
       {{"<!-- team member -->" | safeHTML}}
       <div class="col-lg-3 col-md-6 col-12 d-flex wow fadeInDown" data-wow-duration="500ms">
         <div class="team-member">
-          <div class="member-photo">
+          <div class="member-photo{{ with .portrait_class }} {{ . }}{{ end }}">
             {{"<!-- member photo -->" | safeHTML}}
             {{ partial "image.html" (dict "Src" .image_webp "Alt" .name "Class" "img-fluid lozad" ) }}
           </div>

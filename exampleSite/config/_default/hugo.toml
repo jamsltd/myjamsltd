@@ -94,7 +94,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/myjams-logo.png"
+logo = "images/myjams-logo-white.png"
 # Meta data
 description = "Research-backed adaptive virtual musicians for rehearsal, education, XR performance, and interactive installations."
 author = "MyJAMS Ltd"
@@ -106,7 +106,7 @@ post_share = true
 # preloader
 [params.preloader]
 enable = false
-preloader = "images/myjams-logo.png"
+preloader = "images/myjams-logo-white.png"
 
 # cookies
 [params.cookies]

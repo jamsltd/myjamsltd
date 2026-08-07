@@ -276,6 +276,12 @@ body {
   width: 100%;
 }
 
+@media (max-width: 991px) {
+  .about-2 .col-lg-6.padding-0 {
+    min-height: 360px;
+  }
+}
+
 /* Equal-height team cards with persistent social links */
 .team-member {
   display: flex;
@@ -299,8 +305,29 @@ body {
   filter: grayscale(100%);
   height: 100%;
   object-fit: cover;
-  transform: none;
+  transform: scale(var(--portrait-zoom, 1));
+  transform-origin: var(--portrait-origin, center);
   width: 100%;
+}
+
+.member-photo.portrait-massimiliano {
+  --portrait-origin: 52% 42%;
+  --portrait-zoom: 1.22;
+}
+
+.member-photo.portrait-diar {
+  --portrait-origin: 50% 45%;
+  --portrait-zoom: 1.04;
+}
+
+.member-photo.portrait-arindam {
+  --portrait-origin: 49% 40%;
+  --portrait-zoom: 1.26;
+}
+
+.member-photo.portrait-evguenni {
+  --portrait-origin: 50% 39%;
+  --portrait-zoom: 1.48;
 }
 
 .member-meta {
