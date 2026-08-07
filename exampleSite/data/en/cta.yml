@@ -1,8 +1,8 @@
 ############################# call to action ##############################
 cta:
   enable : true
-  bg_image : "images/backgrounds/bg-white-wall.jpg"
-  bg_image_webp : "images/backgrounds/bg-white-wall.webp"
+  bg_image : "images/backgrounds/cta-band-rehearsal-pavel-danilyuk.jpg"
+  bg_image_webp : "images/backgrounds/cta-band-rehearsal-pavel-danilyuk.webp"
   title : "Build, Pilot, or Exhibit with MyJAMS"
   content : "We work with educators, musicians, researchers, venues, museums, and creative technology partners on demos, pilots, installations, and applied research collaborations."
   button:

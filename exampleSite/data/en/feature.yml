@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/backgrounds/impact-ensemble-rehearsal-rdne.jpg
-  image_webp : images/backgrounds/impact-ensemble-rehearsal-rdne.webp
+  image : images/backgrounds/impact-string-ensemble-cottonbro.jpg
+  image_webp : images/backgrounds/impact-string-ensemble-cottonbro.webp
   title : Impact and Applications
   content : "MyJAMS technologies support music education, rehearsal, performance, research, and inclusive participation in collaborative music-making."
   feature_item : 

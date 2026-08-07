@@ -271,6 +271,21 @@ body {
   display: flex;
 }
 
+/* Rehearsal imagery */
+.about-2 .col-lg-6.padding-0 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.call-to-action {
+  background-position: center 58%;
+}
+
+.call-to-action.overly::before {
+  background: rgba(255, 255, 255, 0.68);
+}
+
 .about .block {
   flex: 1 1 auto;
   width: 100%;
