@@ -1,8 +1,8 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/backgrounds/hero-area.webp"
-  bg_image : "images/backgrounds/hero-area.jpg"
+  bg_image_webp : "images/backgrounds/hero-guitar-marcus-neto.webp"
+  bg_image : "images/backgrounds/hero-guitar-marcus-neto.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "Rehearsal Reimagined"
   content : "MyJAMS develops research-backed rehearsal and performance technologies for musicians, educators, and creative partners. Our responsive virtual bandmates listen, adapt, and coordinate with real performers across iPad, XR, Vision Pro, DAW, and installation environments."
