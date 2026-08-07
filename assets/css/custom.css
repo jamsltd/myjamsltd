@@ -670,3 +670,338 @@ body {
     min-height: 245px;
   }
 }
+
+/* Tap-tempo movie prototype */
+.tap-video-page {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(87, 203, 204, 0.08), transparent 28rem),
+    #1d2024;
+  min-height: calc(100vh - 100px);
+}
+
+.tap-video-section {
+  padding-top: 70px;
+}
+
+.tap-video-intro {
+  margin: 0 auto 36px;
+  max-width: 760px;
+}
+
+.tap-video-intro h1 {
+  color: #ffffff;
+  font-size: clamp(38px, 6vw, 64px);
+  margin-bottom: 18px;
+}
+
+.tap-video-intro > p:last-child {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.tap-video-eyebrow {
+  color: #57cbcc;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tap-video-widget {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.tap-video-stage {
+  aspect-ratio: 16 / 9;
+  background: #0d151b;
+  border: 1px solid rgba(144, 241, 239, 0.25);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+  position: relative;
+}
+
+.tap-video-demo,
+.tap-video-media {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  position: absolute;
+  width: 100%;
+}
+
+.tap-video-media {
+  object-fit: cover;
+  transform: scale(1.65);
+  transform-origin: 50% 44%;
+}
+
+.tap-video-demo[hidden],
+.tap-video-media[hidden] {
+  display: none;
+}
+
+.tap-video-surface {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  inset: 0;
+  padding: 0;
+  position: absolute;
+  touch-action: manipulation;
+  width: 100%;
+  z-index: 2;
+}
+
+.tap-video-surface:focus-visible {
+  outline-offset: -6px !important;
+}
+
+.tap-video-prompt {
+  align-items: center;
+  background: rgba(13, 21, 27, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 164px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 220ms ease, transform 220ms ease;
+  width: 164px;
+}
+
+.tap-video-prompt.is-quiet {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.86);
+}
+
+.tap-video-prompt strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.tap-video-prompt span {
+  color: #c4cdd5;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.tap-video-pulse {
+  border: 3px solid #ffac75;
+  border-radius: 50%;
+  height: 72px;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+  width: 72px;
+}
+
+.tap-video-pulse.is-active {
+  animation: tap-video-pulse 430ms ease-out;
+}
+
+@keyframes tap-video-pulse {
+  0% { opacity: 0.95; transform: translate(-50%, -50%) scale(0.35); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(2.25); }
+}
+
+.tap-video-rate {
+  background: rgba(13, 21, 27, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  left: 18px;
+  padding: 7px 11px;
+  pointer-events: none;
+  position: absolute;
+  top: 18px;
+  z-index: 3;
+}
+
+.tap-video-readout {
+  background: #292f36;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  margin-top: 1px;
+}
+
+.tap-video-readout > div {
+  background: #252b31;
+  min-height: 105px;
+  padding: 22px 24px;
+}
+
+.tap-video-label {
+  color: #9aa7b2;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.tap-video-readout strong {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.tap-video-readout small {
+  color: #9ce7e8;
+  font-size: 13px;
+  margin-left: 3px;
+}
+
+.tap-video-readout .tap-video-status {
+  color: #9ce7e8;
+  font-size: 20px;
+}
+
+.tap-video-meter {
+  align-items: center;
+  display: grid;
+  font-size: 12px;
+  gap: 12px;
+  grid-template-columns: auto 1fr auto;
+  margin: 18px 4px 0;
+}
+
+.tap-video-meter-track {
+  background: rgba(255, 255, 255, 0.12);
+  height: 4px;
+  position: relative;
+}
+
+.tap-video-meter-fill {
+  background: #57cbcc;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.tap-video-meter-marker {
+  background: #ffac75;
+  border: 3px solid #1d2024;
+  border-radius: 50%;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+}
+
+.tap-video-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.tap-video-controls .btn {
+  cursor: pointer;
+  margin: 0;
+  min-width: 126px;
+}
+
+.tap-video-help {
+  color: #9aa7b2;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 24px auto 0;
+  max-width: 720px;
+  text-align: center;
+}
+
+.tap-video-credit {
+  color: #7f8c96;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 12px auto 0;
+  max-width: 720px;
+  text-align: center;
+}
+
+.tap-video-credit a {
+  color: #9ce7e8;
+  text-decoration: underline;
+  text-decoration-color: rgba(156, 231, 232, 0.45);
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .tap-video-section {
+    padding-top: 44px;
+  }
+
+  .tap-video-intro {
+    margin-bottom: 26px;
+  }
+
+  .tap-video-intro > p:last-child {
+    font-size: 16px;
+  }
+
+  .tap-video-prompt {
+    height: 126px;
+    width: 126px;
+  }
+
+  .tap-video-prompt strong {
+    font-size: 17px;
+  }
+
+  .tap-video-prompt span {
+    font-size: 12px;
+  }
+
+  .tap-video-rate {
+    font-size: 15px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .tap-video-readout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tap-video-readout > div {
+    min-height: 92px;
+    padding: 17px;
+  }
+
+  .tap-video-readout > div:last-child {
+    grid-column: 1 / -1;
+    min-height: 78px;
+  }
+
+  .tap-video-controls .btn {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-video-prompt {
+    transition: none;
+  }
+
+  .tap-video-pulse.is-active {
+    animation-duration: 1ms;
+  }
+}

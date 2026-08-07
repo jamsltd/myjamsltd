@@ -1,0 +1,83 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<main class="tap-video-page">
+  <section class="section tap-video-section" aria-labelledby="tap-video-title">
+    <div class="container">
+      <header class="tap-video-intro text-center">
+        <p class="tap-video-eyebrow">Interactive prototype</p>
+        <h1 id="tap-video-title">{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </header>
+
+      <div class="tap-video-widget" data-tap-video-widget data-reference-bpm="120">
+        <div class="tap-video-stage">
+          <canvas class="tap-video-demo" data-demo-canvas aria-hidden="true" hidden></canvas>
+          <video class="tap-video-media" data-video playsinline loop muted autoplay preload="auto"
+            poster="{{ `videos/eddie-ojeda-static-guitar-poster.jpg` | relURL }}"
+            aria-label="Static-camera close-up of Eddie Ojeda playing electric guitar">
+            <source src="{{ `videos/eddie-ojeda-static-guitar.webm` | relURL }}" type="video/webm">
+          </video>
+
+          <button class="tap-video-surface" type="button" data-tap-surface
+            aria-label="Tap repeatedly to control the movie speed">
+            <span class="tap-video-pulse" data-tap-pulse aria-hidden="true"></span>
+            <span class="tap-video-prompt" data-tap-prompt>
+              <strong>Tap the movie</strong>
+              <span>Keep a steady pulse</span>
+            </span>
+          </button>
+
+          <div class="tap-video-rate" aria-hidden="true">
+            <span data-stage-rate>1.00×</span>
+          </div>
+        </div>
+
+        <div class="tap-video-readout">
+          <div>
+            <span class="tap-video-label">Tempo</span>
+            <strong><span data-bpm>—</span> <small>BPM</small></strong>
+          </div>
+          <div>
+            <span class="tap-video-label">Movie speed</span>
+            <strong><span data-rate>1.00</span><small>×</small></strong>
+          </div>
+          <div>
+            <span class="tap-video-label">Response</span>
+            <strong class="tap-video-status" data-status role="status" aria-live="polite">Ready to tap</strong>
+          </div>
+        </div>
+
+        <div class="tap-video-meter" aria-hidden="true">
+          <span>0.5×</span>
+          <div class="tap-video-meter-track">
+            <span class="tap-video-meter-fill" data-meter-fill></span>
+            <span class="tap-video-meter-marker" data-meter-marker></span>
+          </div>
+          <span>2×</span>
+        </div>
+
+        <div class="tap-video-controls">
+          <button class="btn btn-transparent" type="button" data-play-toggle>Pause</button>
+          <button class="btn btn-transparent" type="button" data-mute-toggle>Sound on</button>
+          <button class="btn btn-transparent" type="button" data-reset>Reset tempo</button>
+        </div>
+
+        <p class="tap-video-help">
+          Two taps establish a tempo. Continue tapping to adjust it. If tapping stops, playback returns smoothly to normal speed.
+        </p>
+        <p class="tap-video-credit">
+          Video: <a href="https://commons.wikimedia.org/wiki/File:Headrush_Pedalboard_expression_pedal_(wah_wah)_played_by_Eddie_Ojeda.webm"
+            target="_blank" rel="noopener">Eddie Ojeda playing electric guitar</a> by La Boîte Noire du Musicien,
+          licensed under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{ $widgetScript := resources.Get "js/tap-tempo-video.js" | minify | fingerprint "sha384" }}
+<script src="{{ $widgetScript.Permalink }}" integrity="{{ $widgetScript.Data.Integrity }}" defer></script>
+
+{{ end }}
