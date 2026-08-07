@@ -35,6 +35,12 @@ team:
         - name : LinkedIn
           icon : ti-linkedin
           link : "https://www.linkedin.com/in/diar-karim"
+        - name : GitHub
+          icon : ti-github
+          link : "https://github.com/diarkarim"
+        - name : Website
+          icon : ti-world
+          link : "https://www.diarkarim.com"
 
     # team member loop
     - name : Arindam Dutta
@@ -53,3 +59,18 @@ team:
         - name : Website
           icon : ti-world
           link : "https://virtualrealitylab.netlify.app/author/arindam-dutta/"
+
+    # team member loop
+    - name : Evguenni Penksik
+      image_webp : images/team/evguenni-penksik.webp
+      image : images/team/evguenni-penksik.jpg
+      designation : Engineer
+      content : >
+        Evguenni is the main software developer on the ARME project, developing real-time graphics and audio-video integration for its immersive ensemble system. He holds an MSc in Computational Neuroscience and Cognitive Robotics from the University of Birmingham and an MEng in Mechanical Engineering from the University of Warwick, with expertise spanning virtual and augmented reality, machine learning, 3D graphics, modelling, and game development.
+      social :
+        - name : VR Lab profile
+          icon : ti-world
+          link : "https://virtualrealitylab.netlify.app/author/evguenni-penksik/"
+        - name : ARME profile
+          icon : ti-music-alt
+          link : "https://arme-project.co.uk/author/genia-penksik/"
