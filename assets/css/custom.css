@@ -321,7 +321,7 @@ body {
 
 .member-photo.portrait-massimiliano {
   --portrait-origin: 52% 42%;
-  --portrait-zoom: 1.22;
+  --portrait-zoom: 1.37;
 }
 
 .member-photo.portrait-diar {
@@ -331,12 +331,12 @@ body {
 
 .member-photo.portrait-arindam {
   --portrait-origin: 49% 40%;
-  --portrait-zoom: 1.38;
+  --portrait-zoom: 1.55;
 }
 
 .member-photo.portrait-evguenni {
   --portrait-origin: 50% 39%;
-  --portrait-zoom: 1.65;
+  --portrait-zoom: 1.85;
 }
 
 .member-meta {
