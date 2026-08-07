@@ -8,9 +8,9 @@ team:
       image_webp : images/team/massimiliano-di-luca.webp
       image : images/team/massimiliano-di-luca.jpg
       portrait_class : portrait-massimiliano
-      designation : Scientific Lead / Co-Founder
+      designation : Director / Co-Founder
       content : >
-        Massimiliano (Max) Di Luca is Associate Professor at the University of Birmingham, where he leads the [Virtual Reality Lab](https://virtualrealitylab.netlify.app) and is the PI of the [ARME Project](https://arme-project.co.uk). At MyJAMS Ltd, Max ensures the scientific rigour and innovation
+        Max is Associate Professor at the University of Birmingham, where he leads the [Virtual Reality Lab](https://virtualrealitylab.netlify.app) and is the PI of the [ARME Project](https://arme-project.co.uk). At MyJAMS Ltd, Max ensures the scientific rigour and innovation
         of the technology, guiding its development from experimental prototypes to impactful products.
       social :
         - name : LinkedIn
