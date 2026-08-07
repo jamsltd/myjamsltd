@@ -21,11 +21,16 @@ url = "#feature"
 weight = 4
 
 [[main]]
+name = "team"
+url = "#team"
+weight = 5
+
+[[main]]
 name = "news"
 url = "#blog"
-weight = 5
+weight = 6
 
 [[main]]
 name = "contact"
 url = "#contact"
-weight = 6
+weight = 7
