@@ -1,8 +1,8 @@
 ---
 title: "Kenilworth Revealed at Abbey Fields Living History Afternoon"
 date: 2026-05-26T10:00:00+01:00
-image_webp: images/blog/kenilworth-revealed-ar.png
-image: images/blog/kenilworth-revealed-ar.png
+image_webp: images/blog/kenilworth.jpg
+image: images/blog/kenilworth.jpg
 author: MyJAMS Team
 description : "Kenilworth Revealed featured at a public Living History Afternoon in Abbey Fields, with medieval activities, talks, and guided AR experience tours."
 ---
