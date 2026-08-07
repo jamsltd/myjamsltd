@@ -273,7 +273,7 @@ body {
 
 /* Rehearsal imagery */
 .about-2 .col-lg-6.padding-0 {
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
