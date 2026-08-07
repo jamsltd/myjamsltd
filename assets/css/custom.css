@@ -295,6 +295,15 @@ body {
   background: #1d2024;
 }
 
+.member-photo::after {
+  background: linear-gradient(180deg, rgba(87, 203, 204, 0.08), rgba(13, 18, 23, 0.2));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
 .member-photo picture {
   display: block;
   height: 100%;
@@ -302,7 +311,7 @@ body {
 
 .member-photo img,
 .member-photo:hover img {
-  filter: grayscale(100%);
+  filter: grayscale(100%) contrast(1.1) brightness(0.96) sepia(10%) hue-rotate(130deg) saturate(115%);
   height: 100%;
   object-fit: cover;
   transform: scale(var(--portrait-zoom, 1));
@@ -322,12 +331,12 @@ body {
 
 .member-photo.portrait-arindam {
   --portrait-origin: 49% 40%;
-  --portrait-zoom: 1.26;
+  --portrait-zoom: 1.38;
 }
 
 .member-photo.portrait-evguenni {
   --portrait-origin: 50% 39%;
-  --portrait-zoom: 1.48;
+  --portrait-zoom: 1.65;
 }
 
 .member-meta {
