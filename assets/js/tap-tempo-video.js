@@ -121,13 +121,14 @@
     this.minimumRate = 0.5;
     this.maximumRate = 2;
     this.tracker = new TapTempoTracker();
+    this.activeBpm = null;
     this.targetRate = 1;
     this.currentRate = 1;
     this.lastFrame = null;
     this.demoTime = 0;
-    this.demoPlaying = true;
+    this.demoPlaying = false;
     this.demoActive = false;
-    this.wasStale = false;
+    this.hasStarted = false;
     this.boundFrame = this.frame.bind(this);
 
     this.canvas = element.querySelector("[data-demo-canvas]");
@@ -146,14 +147,12 @@
     this.muteToggle = element.querySelector("[data-mute-toggle]");
     this.resetButton = element.querySelector("[data-reset]");
 
+    this.playToggle.disabled = true;
     this.bindEvents();
     this.video.preservesPitch = true;
+    this.video.muted = false;
     this.video.playbackRate = this.currentRate;
     this.updateRateDisplay();
-    var playback = this.video.play();
-    if (playback && typeof playback.catch === "function") {
-      playback.catch(function () {});
-    }
     requestAnimationFrame(this.boundFrame);
   }
 
@@ -196,6 +195,10 @@
       }
     });
 
+    this.video.addEventListener("seeked", function () {
+      widget.video.playbackRate = widget.currentRate;
+    });
+
     this.video.addEventListener("error", function () {
       widget.activateFallback();
     });
@@ -203,7 +206,6 @@
 
   TapVideoWidget.prototype.registerTap = function (timestamp) {
     var result = this.tracker.tap(timestamp);
-    this.wasStale = false;
     this.pulse();
 
     if (result.ignored) {
@@ -214,9 +216,15 @@
     this.tapPrompt.classList.add("is-quiet");
 
     if (result.bpm === null) {
-      this.bpmOutput.textContent = "—";
-      this.setStatus("One more tap");
+      if (this.activeBpm === null) {
+        this.bpmOutput.textContent = "—";
+        this.setStatus("One more tap");
+      } else {
+        this.bpmOutput.textContent = String(Math.round(this.activeBpm));
+        this.setStatus("One more tap to change tempo");
+      }
     } else {
+      this.activeBpm = result.bpm;
       this.bpmOutput.textContent = String(Math.round(result.bpm));
       this.targetRate = tempoToRate(
         result.bpm,
@@ -225,15 +233,17 @@
         this.maximumRate
       );
       this.setStatus("Following your tempo");
-    }
+      this.hasStarted = true;
+      this.playToggle.disabled = false;
 
-    if (this.demoActive) {
-      this.demoPlaying = true;
-      this.playToggle.textContent = "Pause";
-    } else if (this.video.paused) {
-      var playPromise = this.video.play();
-      if (playPromise && typeof playPromise.catch === "function") {
-        playPromise.catch(function () {});
+      if (this.demoActive) {
+        this.demoPlaying = true;
+        this.playToggle.textContent = "Pause";
+      } else if (this.video.paused) {
+        var playPromise = this.video.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(function () {});
+        }
       }
     }
   };
@@ -250,14 +260,19 @@
 
   TapVideoWidget.prototype.resetTempo = function () {
     this.tracker.clear();
+    this.activeBpm = null;
     this.targetRate = 1;
-    this.wasStale = false;
     this.bpmOutput.textContent = "—";
     this.tapPrompt.classList.remove("is-quiet");
     this.setStatus("Ready to tap");
   };
 
   TapVideoWidget.prototype.togglePlayback = function () {
+    if (!this.hasStarted) {
+      this.setStatus("Tap twice to start");
+      return;
+    }
+
     if (this.demoActive) {
       this.demoPlaying = !this.demoPlaying;
       this.playToggle.textContent = this.demoPlaying ? "Pause" : "Play";
@@ -280,12 +295,14 @@
   TapVideoWidget.prototype.activateFallback = function () {
     this.video.pause();
     this.demoActive = true;
-    this.demoPlaying = true;
+    this.demoPlaying = this.hasStarted;
     this.canvas.hidden = false;
     this.video.hidden = true;
     this.muteToggle.hidden = true;
-    this.playToggle.textContent = "Pause";
-    this.setStatus("Video unavailable — motion demo active");
+    this.playToggle.textContent = this.demoPlaying ? "Pause" : "Play";
+    this.setStatus(this.demoPlaying ?
+      "Video unavailable — motion demo active" :
+      "Video unavailable — tap twice to start motion demo");
   };
 
   TapVideoWidget.prototype.updateRateDisplay = function () {
@@ -403,23 +420,10 @@
     var elapsed = Math.min(timestamp - this.lastFrame, 100);
     this.lastFrame = timestamp;
 
-    if (this.tracker.isStale(timestamp)) {
-      this.targetRate = 1;
-      if (!this.wasStale) {
-        this.wasStale = true;
-        this.bpmOutput.textContent = "—";
-        this.setStatus("Returning to normal");
-      }
-    }
-
     this.currentRate = approachRate(this.currentRate, this.targetRate, elapsed, 280);
 
     if (Math.abs(this.currentRate - this.targetRate) < 0.002) {
       this.currentRate = this.targetRate;
-      if (this.wasStale && this.currentRate === 1) {
-        this.setStatus("Ready to tap");
-        this.tapPrompt.classList.remove("is-quiet");
-      }
     }
 
     if (this.demoActive && this.demoPlaying) {

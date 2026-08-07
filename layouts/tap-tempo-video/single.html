@@ -14,7 +14,7 @@
       <div class="tap-video-widget" data-tap-video-widget data-reference-bpm="120">
         <div class="tap-video-stage">
           <canvas class="tap-video-demo" data-demo-canvas aria-hidden="true" hidden></canvas>
-          <video class="tap-video-media" data-video playsinline loop muted autoplay preload="auto"
+          <video class="tap-video-media" data-video playsinline loop preload="auto"
             poster="{{ `videos/eddie-ojeda-static-guitar-poster.jpg` | relURL }}"
             aria-label="Static-camera close-up of Eddie Ojeda playing electric guitar">
             <source src="{{ `videos/eddie-ojeda-static-guitar.webm` | relURL }}" type="video/webm">
@@ -59,13 +59,13 @@
         </div>
 
         <div class="tap-video-controls">
-          <button class="btn btn-transparent" type="button" data-play-toggle>Pause</button>
-          <button class="btn btn-transparent" type="button" data-mute-toggle>Sound on</button>
+          <button class="btn btn-transparent" type="button" data-play-toggle disabled>Play</button>
+          <button class="btn btn-transparent" type="button" data-mute-toggle>Sound off</button>
           <button class="btn btn-transparent" type="button" data-reset>Reset tempo</button>
         </div>
 
         <p class="tap-video-help">
-          Two taps establish a tempo. Continue tapping to adjust it. If tapping stops, playback returns smoothly to normal speed.
+          Sound is on by default. Two taps establish a tempo and start the movie. The selected tempo remains active when it restarts.
         </p>
         <p class="tap-video-credit">
           Video: <a href="https://commons.wikimedia.org/wiki/File:Headrush_Pedalboard_expression_pedal_(wah_wah)_played_by_Eddie_Ojeda.webm"
