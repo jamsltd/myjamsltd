@@ -150,7 +150,34 @@ test("sound starts on the second valid tap", () => {
   }
 });
 
-test("established tempo survives inactivity and a movie loop seek", () => {
+test("movie loop seek preserves an active tempo", () => {
+  const originalAnimationFrame = global.requestAnimationFrame;
+  global.requestAnimationFrame = () => 0;
+
+  try {
+    const { widget, nodes } = createFakeWidget();
+
+    widget.registerTap(0);
+    widget.registerTap(600);
+    widget.currentRate = widget.targetRate;
+
+    assert.equal(Math.round(widget.activeBpm), 100);
+    assert.equal(widget.targetRate, 100 / 120);
+    assert.equal(nodes.bpm.textContent, "100");
+
+    nodes.video.playbackRate = 1;
+    nodes.video.listeners.seeked();
+    assert.equal(nodes.video.playbackRate, widget.currentRate);
+  } finally {
+    if (originalAnimationFrame === undefined) {
+      delete global.requestAnimationFrame;
+    } else {
+      global.requestAnimationFrame = originalAnimationFrame;
+    }
+  }
+});
+
+test("tempo returns to normal after tapping stops", () => {
   const originalAnimationFrame = global.requestAnimationFrame;
   global.requestAnimationFrame = () => 0;
 
@@ -162,13 +189,10 @@ test("established tempo survives inactivity and a movie loop seek", () => {
     widget.currentRate = widget.targetRate;
     widget.frame(4000);
 
-    assert.equal(Math.round(widget.activeBpm), 100);
-    assert.equal(widget.targetRate, 100 / 120);
-    assert.equal(nodes.bpm.textContent, "100");
-
-    nodes.video.playbackRate = 1;
-    nodes.video.listeners.seeked();
-    assert.equal(nodes.video.playbackRate, widget.currentRate);
+    assert.equal(widget.activeBpm, null);
+    assert.equal(widget.targetRate, 1);
+    assert.equal(nodes.bpm.textContent, "—");
+    assert.equal(nodes.status.textContent, "Returning to normal");
   } finally {
     if (originalAnimationFrame === undefined) {
       delete global.requestAnimationFrame;

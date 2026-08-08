@@ -129,6 +129,7 @@
     this.demoPlaying = false;
     this.demoActive = false;
     this.hasStarted = false;
+    this.wasStale = false;
     this.boundFrame = this.frame.bind(this);
 
     this.canvas = element.querySelector("[data-demo-canvas]");
@@ -206,6 +207,7 @@
 
   TapVideoWidget.prototype.registerTap = function (timestamp) {
     var result = this.tracker.tap(timestamp);
+    this.wasStale = false;
     this.pulse();
 
     if (result.ignored) {
@@ -262,6 +264,7 @@
     this.tracker.clear();
     this.activeBpm = null;
     this.targetRate = 1;
+    this.wasStale = false;
     this.bpmOutput.textContent = "—";
     this.tapPrompt.classList.remove("is-quiet");
     this.setStatus("Ready to tap");
@@ -420,10 +423,24 @@
     var elapsed = Math.min(timestamp - this.lastFrame, 100);
     this.lastFrame = timestamp;
 
+    if (this.activeBpm !== null && this.tracker.isStale(timestamp)) {
+      this.activeBpm = null;
+      this.targetRate = 1;
+      if (!this.wasStale) {
+        this.wasStale = true;
+        this.bpmOutput.textContent = "—";
+        this.setStatus("Returning to normal");
+      }
+    }
+
     this.currentRate = approachRate(this.currentRate, this.targetRate, elapsed, 280);
 
     if (Math.abs(this.currentRate - this.targetRate) < 0.002) {
       this.currentRate = this.targetRate;
+      if (this.wasStale && this.currentRate === 1) {
+        this.setStatus("Ready to tap");
+        this.tapPrompt.classList.remove("is-quiet");
+      }
     }
 
     if (this.demoActive && this.demoPlaying) {
