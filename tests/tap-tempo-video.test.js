@@ -132,6 +132,9 @@ test("sound starts on the second valid tap", () => {
     assert.equal(nodes.video.muted, false);
     assert.equal(nodes.video.paused, true);
     assert.equal(nodes.playToggle.disabled, true);
+    assert.equal(typeof nodes.tapSurface.listeners.click, "function");
+    assert.equal(nodes.tapSurface.listeners.pointerdown, undefined);
+    assert.equal(nodes.tapSurface.listeners.keydown, undefined);
 
     widget.registerTap(0);
     assert.equal(nodes.video.playCalls, 0);
@@ -141,6 +144,33 @@ test("sound starts on the second valid tap", () => {
     assert.equal(nodes.video.paused, false);
     assert.equal(nodes.playToggle.disabled, false);
     assert.equal(Math.round(widget.activeBpm), 120);
+
+    widget.registerTap(1000);
+    assert.equal(nodes.video.playCalls, 1);
+    assert.equal(nodes.video.paused, false);
+  } finally {
+    if (originalAnimationFrame === undefined) {
+      delete global.requestAnimationFrame;
+    } else {
+      global.requestAnimationFrame = originalAnimationFrame;
+    }
+  }
+});
+
+test("playback rate eases gradually toward the tapped tempo", () => {
+  const originalAnimationFrame = global.requestAnimationFrame;
+  global.requestAnimationFrame = () => 0;
+
+  try {
+    const { widget } = createFakeWidget();
+
+    widget.currentRate = 1;
+    widget.targetRate = 2;
+    widget.frame(0);
+    widget.frame(100);
+
+    assert.ok(widget.currentRate > 1);
+    assert.ok(widget.currentRate < 1.2);
   } finally {
     if (originalAnimationFrame === undefined) {
       delete global.requestAnimationFrame;

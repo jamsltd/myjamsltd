@@ -120,6 +120,7 @@
     this.referenceBpm = Number(element.getAttribute("data-reference-bpm")) || 120;
     this.minimumRate = 0.5;
     this.maximumRate = 2;
+    this.rateSmoothingMs = 900;
     this.tracker = new TapTempoTracker();
     this.activeBpm = null;
     this.targetRate = 1;
@@ -160,18 +161,9 @@
   TapVideoWidget.prototype.bindEvents = function () {
     var widget = this;
 
-    this.tapSurface.addEventListener("pointerdown", function (event) {
-      if (event.pointerType !== "mouse" || event.button === 0) {
-        event.preventDefault();
-        widget.registerTap(performance.now());
-      }
-    });
-
-    this.tapSurface.addEventListener("keydown", function (event) {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        widget.registerTap(performance.now());
-      }
+    this.tapSurface.addEventListener("click", function (event) {
+      event.preventDefault();
+      widget.registerTap(performance.now());
     });
 
     this.playToggle.addEventListener("click", function () {
@@ -244,7 +236,9 @@
       } else if (this.video.paused) {
         var playPromise = this.video.play();
         if (playPromise && typeof playPromise.catch === "function") {
-          playPromise.catch(function () {});
+          playPromise.catch(function () {
+            widget.setStatus("Tap again to start playback");
+          });
         }
       }
     }
@@ -433,7 +427,12 @@
       }
     }
 
-    this.currentRate = approachRate(this.currentRate, this.targetRate, elapsed, 280);
+    this.currentRate = approachRate(
+      this.currentRate,
+      this.targetRate,
+      elapsed,
+      this.rateSmoothingMs
+    );
 
     if (Math.abs(this.currentRate - this.targetRate) < 0.002) {
       this.currentRate = this.targetRate;
