@@ -55,6 +55,16 @@
     return current + ((target - current) * proportion);
   }
 
+  function syncPlaybackRate(video, rate) {
+    if (Math.abs(video.defaultPlaybackRate - rate) > 0.005) {
+      video.defaultPlaybackRate = rate;
+    }
+
+    if (Math.abs(video.playbackRate - rate) > 0.005) {
+      video.playbackRate = rate;
+    }
+  }
+
   function TapTempoTracker(options) {
     options = options || {};
     this.minimumInterval = options.minimumInterval || 120;
@@ -120,16 +130,15 @@
     this.referenceBpm = Number(element.getAttribute("data-reference-bpm")) || 120;
     this.minimumRate = 0.5;
     this.maximumRate = 2;
-    this.rateSmoothingMs = 900;
+    this.rateSmoothingMs = 280;
+    this.returnSmoothingMs = this.rateSmoothingMs * 10;
     this.tracker = new TapTempoTracker();
-    this.activeBpm = null;
     this.targetRate = 1;
     this.currentRate = 1;
     this.lastFrame = null;
     this.demoTime = 0;
-    this.demoPlaying = false;
+    this.demoPlaying = true;
     this.demoActive = false;
-    this.hasStarted = false;
     this.wasStale = false;
     this.boundFrame = this.frame.bind(this);
 
@@ -149,21 +158,32 @@
     this.muteToggle = element.querySelector("[data-mute-toggle]");
     this.resetButton = element.querySelector("[data-reset]");
 
-    this.playToggle.disabled = true;
     this.bindEvents();
     this.video.preservesPitch = true;
-    this.video.muted = false;
     this.video.playbackRate = this.currentRate;
     this.updateRateDisplay();
+    var playback = this.video.play();
+    if (playback && typeof playback.catch === "function") {
+      playback.catch(function () {});
+    }
     requestAnimationFrame(this.boundFrame);
   }
 
   TapVideoWidget.prototype.bindEvents = function () {
     var widget = this;
 
-    this.tapSurface.addEventListener("click", function (event) {
-      event.preventDefault();
-      widget.registerTap(performance.now());
+    this.tapSurface.addEventListener("pointerdown", function (event) {
+      if (event.pointerType !== "mouse" || event.button === 0) {
+        event.preventDefault();
+        widget.registerTap(performance.now());
+      }
+    });
+
+    this.tapSurface.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        widget.registerTap(performance.now());
+      }
     });
 
     this.playToggle.addEventListener("click", function () {
@@ -179,17 +199,22 @@
     });
 
     this.video.addEventListener("play", function () {
+      syncPlaybackRate(widget.video, widget.currentRate);
       widget.playToggle.textContent = "Pause";
+    });
+
+    this.video.addEventListener("seeking", function () {
+      syncPlaybackRate(widget.video, widget.currentRate);
+    });
+
+    this.video.addEventListener("seeked", function () {
+      syncPlaybackRate(widget.video, widget.currentRate);
     });
 
     this.video.addEventListener("pause", function () {
       if (!widget.demoActive) {
         widget.playToggle.textContent = "Play";
       }
-    });
-
-    this.video.addEventListener("seeked", function () {
-      widget.video.playbackRate = widget.currentRate;
     });
 
     this.video.addEventListener("error", function () {
@@ -210,15 +235,9 @@
     this.tapPrompt.classList.add("is-quiet");
 
     if (result.bpm === null) {
-      if (this.activeBpm === null) {
-        this.bpmOutput.textContent = "—";
-        this.setStatus("One more tap");
-      } else {
-        this.bpmOutput.textContent = String(Math.round(this.activeBpm));
-        this.setStatus("One more tap to change tempo");
-      }
+      this.bpmOutput.textContent = "—";
+      this.setStatus("One more tap");
     } else {
-      this.activeBpm = result.bpm;
       this.bpmOutput.textContent = String(Math.round(result.bpm));
       this.targetRate = tempoToRate(
         result.bpm,
@@ -227,19 +246,15 @@
         this.maximumRate
       );
       this.setStatus("Following your tempo");
-      this.hasStarted = true;
-      this.playToggle.disabled = false;
+    }
 
-      if (this.demoActive) {
-        this.demoPlaying = true;
-        this.playToggle.textContent = "Pause";
-      } else if (this.video.paused) {
-        var playPromise = this.video.play();
-        if (playPromise && typeof playPromise.catch === "function") {
-          playPromise.catch(function () {
-            widget.setStatus("Tap again to start playback");
-          });
-        }
+    if (this.demoActive) {
+      this.demoPlaying = true;
+      this.playToggle.textContent = "Pause";
+    } else if (this.video.paused) {
+      var playPromise = this.video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(function () {});
       }
     }
   };
@@ -256,7 +271,6 @@
 
   TapVideoWidget.prototype.resetTempo = function () {
     this.tracker.clear();
-    this.activeBpm = null;
     this.targetRate = 1;
     this.wasStale = false;
     this.bpmOutput.textContent = "—";
@@ -265,11 +279,6 @@
   };
 
   TapVideoWidget.prototype.togglePlayback = function () {
-    if (!this.hasStarted) {
-      this.setStatus("Tap twice to start");
-      return;
-    }
-
     if (this.demoActive) {
       this.demoPlaying = !this.demoPlaying;
       this.playToggle.textContent = this.demoPlaying ? "Pause" : "Play";
@@ -292,14 +301,12 @@
   TapVideoWidget.prototype.activateFallback = function () {
     this.video.pause();
     this.demoActive = true;
-    this.demoPlaying = this.hasStarted;
+    this.demoPlaying = true;
     this.canvas.hidden = false;
     this.video.hidden = true;
     this.muteToggle.hidden = true;
-    this.playToggle.textContent = this.demoPlaying ? "Pause" : "Play";
-    this.setStatus(this.demoPlaying ?
-      "Video unavailable — motion demo active" :
-      "Video unavailable — tap twice to start motion demo");
+    this.playToggle.textContent = "Pause";
+    this.setStatus("Video unavailable — motion demo active");
   };
 
   TapVideoWidget.prototype.updateRateDisplay = function () {
@@ -312,8 +319,8 @@
     this.meterFill.style.width = percentage + "%";
     this.meterMarker.style.left = percentage + "%";
 
-    if (!this.demoActive && Math.abs(this.video.playbackRate - this.currentRate) > 0.005) {
-      this.video.playbackRate = this.currentRate;
+    if (!this.demoActive) {
+      syncPlaybackRate(this.video, this.currentRate);
     }
   };
 
@@ -417,8 +424,7 @@
     var elapsed = Math.min(timestamp - this.lastFrame, 100);
     this.lastFrame = timestamp;
 
-    if (this.activeBpm !== null && this.tracker.isStale(timestamp)) {
-      this.activeBpm = null;
+    if (this.tracker.isStale(timestamp)) {
       this.targetRate = 1;
       if (!this.wasStale) {
         this.wasStale = true;
@@ -427,12 +433,8 @@
       }
     }
 
-    this.currentRate = approachRate(
-      this.currentRate,
-      this.targetRate,
-      elapsed,
-      this.rateSmoothingMs
-    );
+    var smoothingMs = this.wasStale ? this.returnSmoothingMs : this.rateSmoothingMs;
+    this.currentRate = approachRate(this.currentRate, this.targetRate, elapsed, smoothingMs);
 
     if (Math.abs(this.currentRate - this.targetRate) < 0.002) {
       this.currentRate = this.targetRate;
@@ -470,6 +472,7 @@
     clamp: clamp,
     init: init,
     median: median,
+    syncPlaybackRate: syncPlaybackRate,
     tempoToRate: tempoToRate
   };
 });

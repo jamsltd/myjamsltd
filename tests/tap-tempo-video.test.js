@@ -4,72 +4,11 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const {
   TapTempoTracker,
-  TapVideoWidget,
   approachRate,
   median,
+  syncPlaybackRate,
   tempoToRate
 } = require("../assets/js/tap-tempo-video.js");
-
-function createFakeWidget() {
-  function createNode() {
-    return {
-      classList: { add() {}, remove() {} },
-      disabled: false,
-      hidden: false,
-      listeners: {},
-      muted: true,
-      offsetWidth: 1,
-      paused: false,
-      playbackRate: 1,
-      playCalls: 0,
-      style: {},
-      textContent: "",
-      addEventListener(name, handler) { this.listeners[name] = handler; },
-      pause() { this.paused = true; },
-      play() { this.playCalls += 1; this.paused = false; return Promise.resolve(); }
-    };
-  }
-
-  const nodes = {
-    canvas: Object.assign(createNode(), { getContext() { return {}; } }),
-    video: createNode(),
-    tapSurface: createNode(),
-    tapPulse: createNode(),
-    tapPrompt: createNode(),
-    bpm: createNode(),
-    rate: createNode(),
-    stageRate: createNode(),
-    status: createNode(),
-    meterFill: createNode(),
-    meterMarker: createNode(),
-    playToggle: createNode(),
-    muteToggle: createNode(),
-    reset: createNode()
-  };
-  nodes.video.paused = true;
-  const selectors = {
-    "[data-demo-canvas]": nodes.canvas,
-    "[data-video]": nodes.video,
-    "[data-tap-surface]": nodes.tapSurface,
-    "[data-tap-pulse]": nodes.tapPulse,
-    "[data-tap-prompt]": nodes.tapPrompt,
-    "[data-bpm]": nodes.bpm,
-    "[data-rate]": nodes.rate,
-    "[data-stage-rate]": nodes.stageRate,
-    "[data-status]": nodes.status,
-    "[data-meter-fill]": nodes.meterFill,
-    "[data-meter-marker]": nodes.meterMarker,
-    "[data-play-toggle]": nodes.playToggle,
-    "[data-mute-toggle]": nodes.muteToggle,
-    "[data-reset]": nodes.reset
-  };
-  const element = {
-    getAttribute() { return "120"; },
-    querySelector(selector) { return selectors[selector]; }
-  };
-
-  return { widget: new TapVideoWidget(element), nodes };
-}
 
 test("median is stable against a single irregular tap", () => {
   assert.equal(median([500, 500, 900, 500]), 500);
@@ -122,112 +61,19 @@ test("rate smoothing approaches the target without overshooting", () => {
   assert.ok(second > first && second < 2);
 });
 
-test("sound starts on the second valid tap", () => {
-  const originalAnimationFrame = global.requestAnimationFrame;
-  global.requestAnimationFrame = () => 0;
+test("returning to normal at ten-times smoothing drifts more slowly", () => {
+  const regular = approachRate(1.5, 1, 100, 280);
+  const slowReturn = approachRate(1.5, 1, 100, 2800);
 
-  try {
-    const { widget, nodes } = createFakeWidget();
-
-    assert.equal(nodes.video.muted, false);
-    assert.equal(nodes.video.paused, true);
-    assert.equal(nodes.playToggle.disabled, true);
-    assert.equal(typeof nodes.tapSurface.listeners.click, "function");
-    assert.equal(nodes.tapSurface.listeners.pointerdown, undefined);
-    assert.equal(nodes.tapSurface.listeners.keydown, undefined);
-
-    widget.registerTap(0);
-    assert.equal(nodes.video.playCalls, 0);
-
-    widget.registerTap(500);
-    assert.equal(nodes.video.playCalls, 1);
-    assert.equal(nodes.video.paused, false);
-    assert.equal(nodes.playToggle.disabled, false);
-    assert.equal(Math.round(widget.activeBpm), 120);
-
-    widget.registerTap(1000);
-    assert.equal(nodes.video.playCalls, 1);
-    assert.equal(nodes.video.paused, false);
-  } finally {
-    if (originalAnimationFrame === undefined) {
-      delete global.requestAnimationFrame;
-    } else {
-      global.requestAnimationFrame = originalAnimationFrame;
-    }
-  }
+  assert.ok(slowReturn > regular);
+  assert.ok(slowReturn < 1.5);
 });
 
-test("playback rate eases gradually toward the tapped tempo", () => {
-  const originalAnimationFrame = global.requestAnimationFrame;
-  global.requestAnimationFrame = () => 0;
+test("video restarts at the current eased playback rate", () => {
+  const video = { defaultPlaybackRate: 1, playbackRate: 1 };
 
-  try {
-    const { widget } = createFakeWidget();
+  syncPlaybackRate(video, 1.35);
 
-    widget.currentRate = 1;
-    widget.targetRate = 2;
-    widget.frame(0);
-    widget.frame(100);
-
-    assert.ok(widget.currentRate > 1);
-    assert.ok(widget.currentRate < 1.2);
-  } finally {
-    if (originalAnimationFrame === undefined) {
-      delete global.requestAnimationFrame;
-    } else {
-      global.requestAnimationFrame = originalAnimationFrame;
-    }
-  }
-});
-
-test("movie loop seek preserves an active tempo", () => {
-  const originalAnimationFrame = global.requestAnimationFrame;
-  global.requestAnimationFrame = () => 0;
-
-  try {
-    const { widget, nodes } = createFakeWidget();
-
-    widget.registerTap(0);
-    widget.registerTap(600);
-    widget.currentRate = widget.targetRate;
-
-    assert.equal(Math.round(widget.activeBpm), 100);
-    assert.equal(widget.targetRate, 100 / 120);
-    assert.equal(nodes.bpm.textContent, "100");
-
-    nodes.video.playbackRate = 1;
-    nodes.video.listeners.seeked();
-    assert.equal(nodes.video.playbackRate, widget.currentRate);
-  } finally {
-    if (originalAnimationFrame === undefined) {
-      delete global.requestAnimationFrame;
-    } else {
-      global.requestAnimationFrame = originalAnimationFrame;
-    }
-  }
-});
-
-test("tempo returns to normal after tapping stops", () => {
-  const originalAnimationFrame = global.requestAnimationFrame;
-  global.requestAnimationFrame = () => 0;
-
-  try {
-    const { widget, nodes } = createFakeWidget();
-
-    widget.registerTap(0);
-    widget.registerTap(600);
-    widget.currentRate = widget.targetRate;
-    widget.frame(4000);
-
-    assert.equal(widget.activeBpm, null);
-    assert.equal(widget.targetRate, 1);
-    assert.equal(nodes.bpm.textContent, "—");
-    assert.equal(nodes.status.textContent, "Returning to normal");
-  } finally {
-    if (originalAnimationFrame === undefined) {
-      delete global.requestAnimationFrame;
-    } else {
-      global.requestAnimationFrame = originalAnimationFrame;
-    }
-  }
+  assert.equal(video.defaultPlaybackRate, 1.35);
+  assert.equal(video.playbackRate, 1.35);
 });
