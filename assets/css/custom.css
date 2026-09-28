@@ -1005,3 +1005,36 @@ body {
     animation-duration: 1ms;
   }
 }
+
+/* Shared funding acknowledgement: official artwork retains its proportions. */
+.funding-band {
+  border-top: 1px solid rgba(236, 239, 241, 0.1);
+  padding: 48px 0;
+}
+.funding-band h2 { font-size: 26px; margin-bottom: 28px; }
+.funding-band h3 { font-size: 21px; line-height: 1.4; }
+.funding-band p { color: #c4cdd5; max-width: 960px; line-height: 1.7; margin-bottom: 0; }
+.funding-band p a { color: #68dedf; text-decoration: underline; text-underline-offset: 3px; }
+.funding-logos { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
+.funding-logo { display: flex; align-items: center; justify-content: center; padding: 28px; width: 340px; max-width: 100%; min-height: 132px; }
+.funding-logo-createch { background: #eff4d4; }
+.funding-logo-ahrc { background: #fff; }
+.funding-logo img { display: block; width: 280px; max-width: 100%; height: auto; }
+.funding-icure { margin-top: 30px; padding-top: 26px; border-top: 1px solid rgba(236, 239, 241, 0.15); }
+.funding-band a:focus-visible { outline: 3px solid #57cbcc; outline-offset: 5px; }
+@media (max-width: 575px) {
+  .funding-band { padding: 36px 0; }
+  .funding-logo { width: 100%; }
+}
+
+.funding-awards { color: #c4cdd5; max-width: 960px; padding-left: 22px; margin-bottom: 26px; line-height: 1.7; }
+.funding-awards li + li { margin-top: 10px; }
+.funding-awards a { color: #68dedf; text-decoration: underline; text-underline-offset: 3px; }
+.funding-logos-icure { margin-top: 20px; }
+.funding-logo-icure { background: #fff; }
+.funding-logo-icure img { width: 268px; }
+
+.member-photo.portrait-chris {
+  --portrait-origin: 64% 43%;
+  --portrait-zoom: 1.5;
+}

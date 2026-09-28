@@ -15,6 +15,12 @@ credibility:
     - name: AHRC / UKRI
       relationship: CreaTech Frontiers programme funder
       link: https://www.ukri.org/councils/ahrc/
+    - name: Innovate UK ICURe Explore
+      relationship: Market exploration funding and support
+      link: https://iuk-business-connect.org.uk/opportunities/icure-explore/
+    - name: Innovate UK ICURe Exploit
+      relationship: Venture development funding and support
+      link: https://iuk-business-connect.org.uk/opportunities/icure-exploit/
     - name: Kenilworth Revealed
       relationship: Public delivery with Kenilworth Town Council and Zubr
       link: https://kenilworth-tc.gov.uk/kenilworth-revealed-augmented-reality-app-brings-history-to-life-and-visitors-to-the-town/

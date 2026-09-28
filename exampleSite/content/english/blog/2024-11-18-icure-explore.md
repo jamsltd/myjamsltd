@@ -11,7 +11,9 @@ description : "Our participation in ICURe Explore phase."
 We took part in the ICURe Explore programme, engaging with stakeholders and exploring commercial opportunities for our technology. This was a key step in validating the market potential of JAMS.
 
 
-Learn more about the [ICURe Explore programme](https://www.ukri.org/what-we-offer/developing-people-and-skills/icure/).
+We acknowledge funding and support through ICURe Explore, part of the Innovate UK ICURe programme.
+
+Learn more about the [ICURe Explore programme](https://iuk-business-connect.org.uk/opportunities/icure-explore/).
 ---
 
 *Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*

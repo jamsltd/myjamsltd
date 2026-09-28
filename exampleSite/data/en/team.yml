@@ -78,3 +78,21 @@ team:
         - name : ARME profile
           icon : ti-music-alt
           link : "https://arme-project.co.uk/author/genia-penksik/"
+
+    - name : Christopher Jared Jones
+      image_webp : images/team/christopher-jared-jones-edited.png
+      image : images/team/christopher-jared-jones-edited.png
+      portrait_class : portrait-chris
+      designation : Intern
+      content : >
+        Chris is an MSci Computer Science student at the University of Birmingham, with experience in music performance capture, audiovisual recording for the ARME project, and augmented reality training applications. At MyJAMS, he will work on guitar interactions for our immersive music technology.
+      social :
+        - name : LinkedIn
+          icon : ti-linkedin
+          link : "https://www.linkedin.com/in/chrisjones2559/"
+        - name : GitHub
+          icon : ti-github
+          link : "https://github.com/c-jones2559"
+        - name : VR Lab profile
+          icon : ti-world
+          link : "https://virtualrealitylab.netlify.app/author/christopher-jared-jones/"

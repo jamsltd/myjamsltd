@@ -1,17 +1,16 @@
 ---
-title: "CreaTech Frontiers Backs MyJAMS Prototype Development"
+title: "CreaTech Frontiers Growth Lab: Business-Growth Support for MyJAMS"
 date: 2025-10-15T10:00:00+01:00
 image_webp: images/blog/createch-logo.svg
 image: images/blog/createch-logo.svg
 logo_image: true
 author: MyJAMS Team
-description : "Early CreaTech Frontiers support helped MyJAMS translate ARME research into practical immersive-music demonstrators."
+description : "MyJAMS completed the ten-week CreaTech Frontiers Growth Lab accelerator, receiving £15,000 of in-kind business-growth support."
+lastmod: 2026-09-28
 ---
 
-MyJAMS has received a CreaTech Frontiers award to support the development of our immersive music technology for rehearsal, performance, and public engagement.
+In 2026, MyJAMS completed the **CreaTech Frontiers Growth Lab**, a competitive ten-week business-growth accelerator for West Midlands creative-technology SMEs.
 
-CreaTech Frontiers is the West Midlands creative industries cluster, supporting innovation in creative technology through collaborative R&D, business support, and access to regional academic and cultural expertise.
+The programme provided **£15,000 of in-kind support**, including tailored mentoring, market validation and investor-readiness development.
 
-The award will help MyJAMS continue translating research from the ARME project into practical demonstrators for adaptive virtual musicians, XR rehearsal, and interactive music experiences.
-
-*We look forward to sharing updates as the project develops.*
+Separately, MyJAMS Ltd received a **£25,000 CreaTech Frontiers Live & Immersive Innovation Fund grant** for *Augmented Ensemble: an Immersive Music Group Rehearsal Product*, with R&D scheduled for October 2026–April 2027. [Read about the Augmented Ensemble award.](/blog/2026-07-31-createch-live-immersive-grant/)

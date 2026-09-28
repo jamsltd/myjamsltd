@@ -11,7 +11,7 @@ MyJAMS has received a **£25,000 grant from the CreaTech Frontiers Live & Immers
 
 The fund supports creative-technology innovation across two closely connected areas: live performance and immersive experiences. It provides opportunities for West Midlands freelancers, microbusinesses, and SMEs to experiment, collaborate, and advance digital innovation and audience engagement.
 
-This award will enable MyJAMS to continue developing research-led immersive music technology and responsive virtual musicians for rehearsal and performance.
+The funded project is **Augmented Ensemble: an Immersive Music Group Rehearsal Product**. This award will enable MyJAMS to continue developing research-led immersive music technology and responsive virtual musicians for rehearsal and performance.
 
 The Live & Immersive Innovation Fund is part of CreaTech Frontiers, a five-year, £7.2 million creative-industries initiative funded by the Arts and Humanities Research Council, part of UK Research and Innovation.
 
