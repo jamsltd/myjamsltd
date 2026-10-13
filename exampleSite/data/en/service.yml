@@ -1,28 +1,13 @@
-################################# Technology #################################
 service:
-  enable : true
-  title : Core Technology
-  service_item :
-    - name : Adaptive Virtual Musicians
-      icon : ti-music-alt
-      content : Responsive performers that adjust timing and coordination to the person playing, rather than simply replaying fixed tracks.
-
-    - name : Natural Timing and Coordination
-      icon : ti-timer
-      content : Performers respond naturally to changes in tempo and interpretation, using research models of synchronisation, temporal adaptation, and ensemble coordination.
-
-    - name : Immersive Rehearsal
-      icon : ti-eye
-      content : XR rehearsal environments for iPad, VR, AR, Apple Vision Pro, and multi-user audiovisual spaces.
-
-    - name : Responsive Digital Performers
-      icon : ti-control-shuffle
-      content : Digital musicians combine AI-assisted avatar animation, sound generation, synchronisation, and interactive performance pipelines.
-
-    - name : Connected Rehearsal Tools
-      icon : ti-layout-grid3
-      content : Tools that connect mobile rehearsal, XR prototypes, DAW workflows, and physical installations.
-
-    - name : Realistic Ensemble Behaviour
-      icon : ti-user
-      content : Virtual rehearsal systems designed around realistic musical behaviour, social presence, and ensemble practice needs—an approach researchers describe as ecological validity.
+  enable: true
+  title: How You Interact
+  service_item:
+    - name: Play or tap
+      icon: ti-music-alt
+      content: Interact with virtual musicians through live playing or the tapping interface in our research demonstrations.
+    - name: Hear the response
+      icon: ti-headphone
+      content: Recorded performances become responsive musical partners through timing adaptation.
+    - name: Explore together
+      icon: ti-control-shuffle
+      content: Explore changes in pace and the possibilities of musical interaction for rehearsal and creative practice.

@@ -1038,3 +1038,100 @@ body {
   --portrait-origin: 64% 43%;
   --portrait-zoom: 1.5;
 }
+
+/* A concise showcase journey, with the research imagery labelled in context. */
+.showcase-home .section { padding: 64px 0; }
+.showcase-home .title { padding-bottom: 32px; }
+.showcase-home .title h2 { text-transform: none; }
+.showcase-home .title p.section-intro { color: #c4cdd5; }
+.showcase-home section[id] { scroll-margin-top: 112px; }
+.showcase-hero { background: #20262d; padding: 62px 0 48px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 44px; }
+.eyebrow { color: #8de0df; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; }
+.hero-copy h1 { color: #fff; font-size: clamp(40px, 4.4vw, 64px); font-weight: 700; line-height: 1.04; letter-spacing: -.025em; max-width: 9em; margin-bottom: 24px; }
+.hero-description { font-size: 19px; line-height: 1.65; margin-bottom: 26px; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+.hero-photo { margin: 0; }
+.hero-photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.hero-photo figcaption { font-size: 13px; line-height: 1.5; color: #b8c5d0; margin-top: 12px; }
+.text-link { color: #9ce7e8; text-decoration: underline; text-underline-offset: 4px; }
+.text-link:hover, .text-link:focus { color: #fff; }
+.btn-main, .btn-main:hover, .btn-main:focus, #contact-submit, #contact-submit:hover, #contact-submit:focus { color: #12282d; background: #57cbcc; border-color: #57cbcc; font-weight: 700; }
+.btn-main:hover, #contact-submit:hover { background: #8de0df; border-color: #8de0df; }
+.hero-actions .btn { padding: 14px 22px; letter-spacing: .02em; text-transform: none; }
+.event-banner { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 28px; margin-bottom: 44px; border-left: 3px solid #57cbcc; background: #252c33; }
+.event-banner .eyebrow { margin-bottom: 6px; }
+.event-banner h2 { color: #fff; font-size: 23px; margin: 0; }
+.event-place { flex-shrink: 0; }
+.event-place p { margin: 0 0 4px; color: #fff; }
+.event-place strong, .event-place span { display: block; }
+.event-place span { font-size: 14px; margin-top: 3px; }
+.section-heading { max-width: 760px; margin-bottom: 28px; }
+.section-heading h2, .research-grid h2 { color: #fff; font-size: 36px; font-weight: 700; line-height: 1.15; }
+.section-heading p { margin-top: 16px; line-height: 1.7; }
+.demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.demo-card { background: #292f36; border: 1px solid #4d5a65; border-radius: 3px; padding: 28px; }
+.demo-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+.demo-card-top i { color: #8de0df; font-size: 32px; }
+.demo-card-top .prototype-status { margin: 0; }
+.demo-card h3 { font-size: 28px; font-weight: 700; color: #fff; }
+.demo-interaction { color: #9ce7e8; font-weight: 700; }
+.demo-card p { line-height: 1.65; }
+.demo-card .demo-note { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid #4d5a65; font-size: 14px; }
+.showcase-followup { margin: 24px 0 0; line-height: 1.8; }
+.showcase-home #services { background: #292f36; }
+.showcase-home .service-block { border: 0; box-shadow: none; padding: 12px 20px; margin: 0; }
+.showcase-home .service-block h3 { color: #fff; font-size: 23px; }
+.showcase-home .service-icon { font-size: 34px; color: #8de0df; }
+.research-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+.research-grid p { font-size: 18px; line-height: 1.7; }
+.showcase-home .case-study-image { aspect-ratio: 16 / 8; }
+.showcase-home .case-study-content { padding: 24px; }
+.showcase-home .case-study-content h3 { color: #fff; }
+.showcase-home .credibility-band { padding: 32px 0; }
+.showcase-home .member-photo { aspect-ratio: 1 / 1; }
+.showcase-home .member-meta { padding: 16px; }
+.showcase-home .member-meta h4 { color: #fff; font-size: 20px; }
+.showcase-home .member-meta > span { color: #c4cdd5; font-size: 14px; }
+.member-bio { margin: 16px 0; font-size: 15px; line-height: 1.6; }
+.member-bio summary { color: #9ce7e8; cursor: pointer; padding: 8px 0; }
+.member-bio > div { padding-top: 10px; }
+.member-bio summary:focus-visible { outline: 3px solid #57cbcc; outline-offset: 3px; }
+.showcase-home .member-social { display: flex; flex-wrap: wrap; gap: 6px; }
+.showcase-home .member-social .list-inline-item { margin: 0; }
+.showcase-home .member-social li a { width: 38px; height: 38px; }
+.form-meghna label { display: block; color: #e4ebef; font-weight: 700; margin-bottom: 7px; }
+.form-meghna .form-control { border-color: #63717d; }
+.contact-alternative { margin: 24px 0; }
+.navbar-dark .navbar-nav .nav-link { color: #c4cdd5; }
+@media (max-width: 991px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-copy h1 { max-width: 12em; }
+  .hero-photo { max-width: 680px; }
+  .event-banner { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .research-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+@media (max-width: 575px) {
+  .showcase-home .section { padding: 40px 0; }
+  .showcase-home .title h2, .section-heading h2, .research-grid h2 { font-size: 30px; }
+  .showcase-hero { padding: 32px 0; }
+  .hero-copy h1 { font-size: 42px; }
+  .hero-description { font-size: 17px; line-height: 1.6; }
+  .hero-actions { gap: 16px; }
+  .hero-actions .btn { width: 100%; }
+  .event-banner { padding: 22px; margin-bottom: 30px; }
+  .event-banner h2 { font-size: 22px; }
+  .event-place { flex-shrink: 1; }
+  .event-place p { font-size: 15px; }
+  .demo-grid { grid-template-columns: 1fr; gap: 18px; }
+  .demo-card { padding: 22px; }
+  .demo-card h3 { font-size: 26px; }
+  .demo-card-top .prototype-status { font-size: 10px; }
+  .showcase-home .service-block { padding: 18px 8px; }
+  .showcase-home .team-member { max-width: 360px; margin-left: auto; margin-right: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.hero-event { display: inline-block; margin: 0 0 20px; font-size: 15px; }

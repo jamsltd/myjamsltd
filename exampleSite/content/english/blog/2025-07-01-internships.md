@@ -13,4 +13,4 @@ We have hosted multiple student internships, giving young researchers and develo
 Discover more about [student internships at the University of Birmingham](https://www.birmingham.ac.uk/).
 ---
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

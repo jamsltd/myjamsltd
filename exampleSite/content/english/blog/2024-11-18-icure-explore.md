@@ -16,4 +16,4 @@ We acknowledge funding and support through ICURe Explore, part of the Innovate U
 Learn more about the [ICURe Explore programme](https://iuk-business-connect.org.uk/opportunities/icure-explore/).
 ---
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

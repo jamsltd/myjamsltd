@@ -1,16 +1,6 @@
-############################# About ###################################
 about:
-  enable : true
-  title : About MyJAMS
-  about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : Research translation
-    content : MyJAMS Ltd was founded to translate the Augmented Reality Music Ensemble research programme into practical rehearsal, training, and immersive performance technologies.
-    
-  - icon : ti-music-alt # themify icon pack : https://themify.me/themify-icons
-    title : Practice music together
-    content : Our systems let performers rehearse with virtual musicians that adapt to timing, interpretation, and musical context, supporting solo practice, ensemble preparation, teaching, and creative production.
-
-  - icon : ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-    title : Human-AI collaboration
-    content : We build AI collaborators for creative rehearsal and performance, combining immersive media, avatar animation, sound generation, and real-time interaction.
+  enable: true
+  title: From research to rehearsal
+  content: MyJAMS is a Birmingham-based creative technology company building on the University of Birmingham’s [Augmented Reality Music Ensemble (ARME)](https://arme-project.co.uk/) research programme. Our CreaTech Frontiers-funded project, Augmented Ensemble, is developing and evaluating responsive virtual musicians for group musical practice.
+  link: https://arme-project.co.uk/
+  link_label: Explore the ARME research

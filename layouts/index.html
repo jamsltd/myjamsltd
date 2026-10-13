@@ -1,35 +1,14 @@
 {{ define "main" }}
-
-{{ partial "banner.html" . }}
-
 {{ partial "navigation.html" . }}
-
-{{ partial "about.html" . }}
-
-{{ partial "credibility.html" . }}
-
+<main id="main-content" class="showcase-home">
+{{ partial "banner.html" . }}
+{{ partial "showcase.html" . }}
 {{ partial "service.html" . }}
-
-{{ partial "portfolio.html" . }}
-
-{{ partial "feature.html" . }}
-
+{{ partial "about.html" . }}
 {{ partial "case-studies.html" . }}
-
-{{ partial "cta.html" . }}
-
-{{ partial "funfacts.html" . }}
-
+{{ partial "credibility.html" . }}
 {{ partial "team.html" . }}
-
-{{ partial "pricing.html" . }}
-
-{{ partial "testimonial.html" . }}
-
 {{ partial "blog.html" . }}
-
 {{ partial "contact.html" . }}
-
-{{ partial "map.html" . }}
-
+</main>
 {{ end }}

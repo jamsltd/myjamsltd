@@ -13,4 +13,4 @@ We are proud to announce the official founding of MyJAMS Ltd, a spin-out from th
 Read more about the [University of Birmingham spin-outs](https://www.birmingham.ac.uk/research/impact/spinouts).
 ---
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

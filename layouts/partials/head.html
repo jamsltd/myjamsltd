@@ -25,9 +25,14 @@
 	{{ $custom := resources.Get "css/custom.css" | minify }}
   <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
 
-	{{ "<!--Favicon-->" | safeHTML }}
-	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	{{ "<!-- Logo symbol favicons: transparent light blue, without company text -->" | safeHTML }}
+	{{ $favicon := resources.Get "images/myjams-symbol-blue.png" }}
+	{{ range slice 16 32 192 }}
+	{{ $icon := $favicon.Resize (printf "%dx%d png" . .) }}
+	<link rel="icon" href="{{ $icon.RelPermalink }}" type="image/png" sizes="{{ . }}x{{ . }}">
+	{{ end }}
+	{{ $touchIcon := $favicon.Resize "180x180 png" }}
+	<link rel="apple-touch-icon" href="{{ $touchIcon.RelPermalink }}" sizes="180x180">
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}

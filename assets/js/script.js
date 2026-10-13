@@ -95,41 +95,28 @@ jQuery(function ($) {
 
 
 
-	function myFunction(x) {
-		if (x.matches) {
-			var topOf = 50
-		} else {
-			var topOf = 350
-		}
-	}
-
-	var html_body = $('html, body');
-	$('nav a, .page-scroll').on('click', function () { //use page-scroll class in any HTML tag for scrolling
-		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				html_body.animate({
-					scrollTop: target.offset().top - 50
-				}, 1500, 'easeInOutExpo');
-				return false;
+	// Use the actual sticky header height and preserve native fragment navigation.
+	$('nav a, .page-scroll').on('click', function (event) {
+		if (this.hash && location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+			var target = document.getElementById(this.hash.slice(1));
+			if (target) {
+				event.preventDefault();
+				var hash = this.hash;
+				function navigateToSection() {
+					var headerHeight = $('.navbar').outerHeight() || 100;
+					window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - headerHeight - 16,
+						behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+					history.pushState(null, '', hash);
+					target.setAttribute('tabindex', '-1');
+					target.focus({ preventScroll: true });
+				}
+				var menu = $('#navigation');
+				if (menu.hasClass('show') && $('.navbar-toggler').is(':visible')) {
+					menu.one('hidden.bs.collapse', navigateToSection).collapse('hide');
+				} else {
+					navigateToSection();
+				}
 			}
-		}
-	});
-
-	// easeInOutExpo Declaration
-	jQuery.extend(jQuery.easing, {
-		easeInOutExpo: function (x, t, b, c, d) {
-			if (t === 0) {
-				return b;
-			}
-			if (t === d) {
-				return b + c;
-			}
-			if ((t /= d / 2) < 1) {
-				return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
-			}
-			return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
 		}
 	});
 

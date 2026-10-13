@@ -12,4 +12,4 @@ ARME (Augmented Reality Music Ensemble) enables musicians to rehearse together i
 For more details, visit the [ARME project website](https://arme-project.co.uk).
 ---
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

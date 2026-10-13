@@ -19,4 +19,4 @@ Read more in [Kenilworth Nub News](https://kenilworth.nub.news/news/local-news/l
 
 ***
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

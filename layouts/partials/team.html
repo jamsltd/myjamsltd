@@ -18,7 +18,7 @@
 
       {{ range .team_member}}
       {{"<!-- team member -->" | safeHTML}}
-      <div class="col-lg-3 col-md-6 col-12 d-flex wow fadeInDown" data-wow-duration="500ms">
+      <div class="col-lg col-md-4 col-sm-6 col-12 d-flex wow fadeInDown" data-wow-duration="500ms">
         <div class="team-member">
           <div class="member-photo{{ with .portrait_class }} {{ . }}{{ end }}">
             {{"<!-- member photo -->" | safeHTML}}
@@ -29,7 +29,7 @@
           <div class="member-meta">
             <h4>{{ .name }}</h4>
             <span>{{ .designation | markdownify}}</span>
-            <p>{{ .content | markdownify }}</p>
+            <details class="member-bio"><summary>Read biography<span class="sr-only"> of {{ .name }}</span></summary><div>{{ .content | markdownify }}</div></details>
             {{ $memberName := .name }}
             <ul class="member-social list-inline" aria-label="{{ .name }} social links">
               {{ range .social }}

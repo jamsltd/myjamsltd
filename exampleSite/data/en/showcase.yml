@@ -1,0 +1,21 @@
+showcase:
+  title: Experience interactive musicians
+  intro: Two research demonstrations explore how recorded musicians can become interactive partners. The integrated Augmented Ensemble rehearsal system is under development.
+  event:
+    name: Frontiers Day · Birmingham Tech Week
+    date: 21 October 2026
+    datetime: "2026-10-21"
+    time: "09:00–16:00"
+    venue: ICC Birmingham
+    address: 8 Centenary Square, Birmingham B1 2EA
+  demos:
+    - title: Live guitar duet
+      icon: ti-music-alt
+      interaction: Listen and explore the interaction
+      description: Hear a guitarist interact with a recorded virtual partner, and explore how changes in pace shape the musical exchange.
+      note: A short, guided demonstration.
+    - title: Interact with a quartet
+      icon: ti-hand-point-up
+      interaction: Try the iPad interface
+      description: Tap on an iPad to interact with a recorded classical quartet. Explore changes in pace through a guided, hands-on demonstration.
+      note: No instrument-playing experience needed.

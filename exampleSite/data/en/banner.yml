@@ -1,12 +1,15 @@
-############################### Banner ################################
 banner:
-  enable : true
-  bg_image_webp : "images/backgrounds/hero-guitar-marcus-neto.webp"
-  bg_image : "images/backgrounds/hero-guitar-marcus-neto.jpg"
-  icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "Rehearsal Reimagined"
-  content : "MyJAMS develops research-backed rehearsal and performance technologies for musicians, educators, and creative partners. Our responsive virtual bandmates listen, adapt, and coordinate with real performers across iPad, XR, Vision Pro, DAW, and installation environments."
+  enable: true
+  eyebrow: Interactive virtual musicians
+  title: Rehearsal Reimagined
+  content: MyJAMS develops interactive virtual musicians for rehearsal, teaching and creative performance. Practice the violin, guitar, bass or drums with responsive musical partners.
+  image: images/blog/arme.jpg
+  image_alt: A violinist wearing an augmented reality headset beside a screen showing virtual ensemble musicians
+  image_caption: ARME research at the University of Birmingham — the foundation for MyJAMS.
   button:
-    enable : true
-    label : "Book a demo"
-    link : "#contact"
+    enable: true
+    label: Explore the demonstrations
+    link: "#portfolio"
+  secondary_button:
+    label: Discuss a collaboration
+    link: "#contact"

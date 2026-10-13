@@ -1,25 +1,26 @@
-{{ $data := index site.Data site.Language.Lang }} {{ if
-$data.banner.banner.enable }} {{ with $data.banner.banner }} {{"<!-- Welcome Slider-->"
-| safeHTML}}
-<section
-  class="hero-area" {{ partial `bg-image.html` (dict `Src` .bg_image_webp) | safeHTMLAttr }}
->
-  {{ partial "image" (dict "Src" .bg_image_webp "Alt"
-  .Title "Class" "d-none") }}
-
-  <div class="block">
-    {{ if .icon }}
-    <div class="video-button">
-      <i class="{{ .icon }}"></i>
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.banner.banner.enable }}
+{{ with $data.banner.banner }}
+<section class="showcase-hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ .eyebrow }}</p>
+      {{ with $data.showcase.showcase.event }}<a class="hero-event text-link page-scroll" href="#portfolio">{{ .venue }} · {{ .date }} <span aria-hidden="true">→</span></a>{{ end }}
+      <h1 id="hero-title">{{ .title }}</h1>
+      <p class="hero-description">{{ .content }}</p>
+      <div class="hero-actions">
+        {{ with .button }}<a class="btn btn-main page-scroll" href="{{ .link }}">{{ .label }}</a>{{ end }}
+        {{ with .secondary_button }}<a class="text-link page-scroll" href="{{ .link }}">{{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}
+      </div>
     </div>
-    {{ end }}
-    <h1>{{ .title | markdownify }}</h1>
-    <p>{{ .content | markdownify }}</p>
-    {{ if .button.enable }} {{ with .button }}
-    <a href="{{ .link }}" class="btn btn-transparent page-scroll"
-      >{{ .label }}</a
-    >
-    {{ end }} {{ end }}
+    <figure class="hero-photo">
+      {{ $image := resources.Get .image }}
+      {{ $large := $image.Resize "1200x webp" }}
+      {{ $small := $image.Resize "600x webp" }}
+      <img src="{{ $large.RelPermalink }}" srcset="{{ $small.RelPermalink }} 600w, {{ $large.RelPermalink }} 1200w" sizes="(max-width: 991px) 100vw, 50vw" width="{{ $large.Width }}" height="{{ $large.Height }}" alt="{{ .image_alt }}" fetchpriority="high">
+      <figcaption>{{ .image_caption }}</figcaption>
+    </figure>
   </div>
 </section>
-{{"<!-- /Welcome Slider-->" | safeHTML}} {{end}} {{end}}
+{{ end }}
+{{ end }}

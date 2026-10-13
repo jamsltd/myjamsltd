@@ -1,36 +1,29 @@
-
-################### English Navigation ########################
 [[main]]
-name = "about"
-url = "#about"
+name = "Demonstrations"
+url = "#portfolio"
 weight = 1
 
 [[main]]
-name = "technology"
+name = "How you interact"
 url = "#services"
 weight = 2
 
 [[main]]
-name = "prototypes"
-url = "#portfolio"
+name = "Research"
+url = "#about"
 weight = 3
 
 [[main]]
-name = "impact"
-url = "#feature"
+name = "Team"
+url = "#team"
 weight = 4
 
 [[main]]
-name = "team"
-url = "#team"
+name = "News"
+url = "#blog"
 weight = 5
 
 [[main]]
-name = "news"
-url = "#blog"
-weight = 6
-
-[[main]]
-name = "contact"
+name = "Get in touch"
 url = "#contact"
-weight = 7
+weight = 6

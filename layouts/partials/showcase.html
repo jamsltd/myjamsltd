@@ -1,0 +1,24 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ with $data.showcase.showcase }}
+<section id="portfolio" class="section showcase-section" aria-labelledby="showcase-title">
+  <div class="container">
+    {{ with .event }}
+    <aside class="event-banner" aria-label="ICC showcase details">
+      <div><p class="eyebrow">Meet MyJAMS</p><h2>{{ .name }}</h2></div>
+      <div class="event-place"><p><time datetime="{{ .datetime }}">{{ .date }}</time> · {{ .time }}</p><strong>{{ .venue }}</strong><span>{{ .address }}</span></div>
+    </aside>
+    {{ end }}
+    <div class="section-heading"><h2 id="showcase-title">{{ .title }}</h2><p>{{ .intro }}</p></div>
+    <div class="demo-grid">
+      {{ range .demos }}
+      <article class="demo-card">
+        <div class="demo-card-top"><i class="{{ .icon }}" aria-hidden="true"></i><span class="prototype-status">Research demonstration</span></div>
+        <h3>{{ .title }}</h3><p class="demo-interaction">{{ .interaction }}</p>
+        <p>{{ .description }}</p><p class="demo-note">{{ .note }}</p>
+      </article>
+      {{ end }}
+    </div>
+    <p class="showcase-followup">Interested in using this approach in your work? <a href="#contact" class="text-link page-scroll">Discuss a pilot or collaboration <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+{{ end }}

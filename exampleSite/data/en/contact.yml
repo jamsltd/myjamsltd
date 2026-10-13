@@ -1,21 +1,21 @@
 ############################## Contact #############################
 contact:
   enable : true
-  title : Contact Us
-  subtitle : Contact Details
-  content :      Tell us whether you would like to book a demo, discuss a pilot, explore a research collaboration, or develop an installation.
+  title : Get In Touch
+  subtitle : Continue the conversation
+  content :      Met us at the ICC, or interested in our research prototypes? Tell us about your work and whether you would like a demonstration, a pilot or a collaboration.
 
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
       info : "Birmingham, UK"
-      
+
   #  - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
   #    info : "Phone: +880-31-000-000"
-      
+
   #  - icon : ti-printer # themify icon pack : https://themify.me/themify-icons
   #    info : "Fax: +880-31-000-000"
-      
+
    # - icon : ti-email # themify icon pack : https://themify.me/themify-icons
    #   info : "Email: hello@meghna.com"
 
@@ -28,4 +28,4 @@ contact:
     email : "Your Email"
     subject : "Subject"
     message : "Message"
-    submit : "Submit"   
+    submit : "Send enquiry"

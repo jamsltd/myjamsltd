@@ -37,4 +37,4 @@ Examples of the technology in use:
 Find out more about [Kenilworth Revealed](https://kenilworth-tc.gov.uk/kenilworth-revealed-augmented-reality-to-bring-st-marys-abbey-to-life/).
 ---
 
-*Follow [MyJAMS Ltd](https://jamsltd.netlify.app) for more updates on our projects and journey.*
+*Follow [MyJAMS Ltd](https://myjamsltd.netlify.app) for more updates on our projects and journey.*

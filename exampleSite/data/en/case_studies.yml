@@ -1,13 +1,13 @@
 case_studies:
   enable: true
-  title: Selected Case Studies
-  content: Concise examples of how the research and technology have been applied, using outcomes documented by the project.
+  title: Research and Public Projects
+  content: Explore the research behind MyJAMS and an example of our work in immersive heritage.
   studies:
     - title: Adaptive Ensemble Rehearsal
       status: Research programme
       image_webp: images/blog/arme.jpg
       user: String-quartet musicians rehearsing without a complete live ensemble.
-      problem: Fixed backing tracks cannot respond to changes in a performer's timing and interpretation.
+      problem: Fixed backing tracks cannot respond to changes in a performer's timing.
       intervention: ARME paired performers with responsive virtual musicians in augmented rehearsal environments.
       outcome: The programme established the research foundation for MyJAMS' current iPad, XR and adaptive-ensemble demonstrators.
       link: /blog/2024-01-15-arme-update/
@@ -22,14 +22,3 @@ case_studies:
       outcome: A public AR visitor experience was launched, followed by guided demonstrations at the May 2026 Living History Afternoon.
       link: /blog/2025-10-03-kenilworth-revealed/
       link_label: View the public case study
-
-    - title: From Research to Venture
-      status: Commercial discovery
-      image_webp: images/blog/icure-explore-logo.png
-      logo_image: true
-      user: The MyJAMS founding team and prospective product partners.
-      problem: Academic demonstrators required market evidence and a clearer route towards adoption.
-      intervention: ICURe Explore supported stakeholder discovery, followed by strategy and investor engagement through ICURe Exploit.
-      outcome: The work refined the commercial strategy and informed progression from research demonstrators towards products.
-      link: /blog/2025-03-05-icure-exploit/
-      link_label: Read the ICURe update

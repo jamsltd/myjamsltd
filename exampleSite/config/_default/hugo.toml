@@ -96,7 +96,7 @@ link = "plugins/google-map/map.js"
 [params]
 logo = "images/myjams-logo-white.png"
 # Meta data
-description = "Research-backed adaptive virtual musicians for rehearsal, education, XR performance, and interactive installations."
+description = "MyJAMS develops interactive virtual musicians for rehearsal, teaching and creative performance. Play or tap to explore music with responsive musical partners."
 author = "MyJAMS Ltd"
 # Google Analytics
 google_analytics_id = "" # Your ID
