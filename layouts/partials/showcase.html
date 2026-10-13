@@ -4,7 +4,7 @@
   <div class="container">
     {{ with .event }}
     <aside class="event-banner" aria-label="ICC showcase details">
-      <div><p class="eyebrow">Meet MyJAMS</p><h2>{{ .name }}</h2></div>
+      <div><p class="eyebrow">Meet MyJAMS</p><h2><a class="text-link" href="{{ .link }}">{{ .name }} <span aria-hidden="true">↗</span></a></h2></div>
       <div class="event-place"><p><time datetime="{{ .datetime }}">{{ .date }}</time> · {{ .time }}</p><strong>{{ .venue }}</strong><span>{{ .address }}</span></div>
     </aside>
     {{ end }}
